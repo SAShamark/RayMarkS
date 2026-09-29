@@ -27,11 +27,6 @@
       <script src="assets/js/modernizr.min.js"></script>
    </head>
    <body class="home dark font-Poppins text-fs-16 text-white font-medium leading-lh-1.6 relative w-full bg-black">
-      <!-- Preloader Starts -->
-      <div id="preloader" class="fixed z-100 group left-0 top-0 h-screen w-full flex justify-center items-center pointer-events-none before:absolute before:left-0 before:top-0 before:w-1/2 before:h-full before:bg-black-3 before:transition-all before:duration-300 after:absolute after:right-0 after:top-0 after:w-1/2 after:h-full after:bg-black-3 after:transition-all after:duration-300 [&.preloaded]:before:animate-finishanimation [&.preloaded]:after:animate-finishanimation">
-         <div class="line m-0 h-250 w-3 rounded-4 relative overflow-hidden transition-all duration-700 before:animate-animateline before:z-10 before:absolute before:left-0 before:top-1/2 before:w-3 before:h-0 before:-translate-y-1/2 after:animate-animatebgline after:absolute after:left-0 after:w-1 after:h-full after:bg-transparent after:-translate-y-full group-[.preloaded]:opacity-0 group-[.preloaded]:!h-full group-[.preloaded]:after:opacity-0"></div>
-      </div>
-      <!-- Preloader Ends -->
       <!-- Header Starts -->
       <header class="header from-lg:fixed from-lg:right-30 from-lg:bottom-0 from-lg:z-30 from-lg:flex from-lg:items-center from-lg:h-[calc(100vh-200px)] from-lg:top-100 from-lg:opacity-100 from-lg:transition from-lg:duration-300 from-lg:[&.hide-header]:z-0 from-lg:[&.hide-header]:opacity-0" id="navbar-collapse-toggle">
          <div class="language-switcher" aria-label="Language selector">
@@ -162,56 +157,37 @@
                </div>
                <!-- Section Title Ends -->
                <div class="studio-layout xl:max-w-1140 custom-md-3:max-w-[calc(100%-195px)] lg:max-w-960 md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto px-15 xs:px-25">
-                  <div class="flex flex-wrap -mx-15">
-                     <div class="xl:basis-7/12 lg:basis-1/2 down-lg:basis-full px-15">
-                        <p class="uppercase text-accent font-semibold mb-12">Independent game development</p>
-                        <h3 class="text-fs-29 xs:text-fs-26 leading-lh-1.4 text-white font-semibold mb-18">Small studio. Full production focus.</h3>
-                        <p class="text-fs-16 leading-lh-1.8 mb-18">Markovskiy Games is an independent game-development practice led by Oleksandr Markovskiy — a Unity and C# developer with commercial experience building games and gameplay systems.</p>
-                        <p class="text-fs-16 leading-lh-1.8 mb-30">The focus is on clear, responsive gameplay, maintainable technical foundations and features that integrate smoothly into a real production pipeline.</p>
-                        <a href="assets/documents/CV_Markovskiy.pdf" target="_blank" rel="noopener" class="btn btn-download uppercase text-fs-15 font-medium text-white inline-block rounded-35 relative pl-29 pr-70 leading-lh-51 h-55 border border-accent overflow-hidden">
-                           <span class="relative z-10">view developer CV</span>
-                           <span class="absolute right-0 top-0 bottom-0 w-55 flex items-center justify-center bg-accent text-white"><i class="fa fa-file-pdf-o"></i></span>
-                        </a>
+                  <section class="studio-intro">
+                     <div class="studio-intro__copy">
+                        <p class="studio-eyebrow">Independent game studio</p>
+                        <h3>A studio built around <span>playable ideas.</span></h3>
+                        <p>Ray MarkS Studio is an independent game-development practice led by Oleksandr Markovskiy. We build focused game experiences with clear gameplay, maintainable technical foundations and a production-minded approach.</p>
+                        <div class="studio-intro__actions"><a class="studio-button studio-button--primary" href="#portfolio">Explore portfolio <i class="fa fa-arrow-right"></i></a><a class="studio-button" href="#contact">Get in touch</a></div>
                      </div>
-                     <div class="xl:basis-5/12 lg:basis-1/2 down-lg:basis-full px-15 down-lg:mt-45">
-                        <div class="studio-brand-mark"><img src="assets/img/brand/raymarks-logo-white.png" alt="RayMarkS Games logo"></div>
-                        <h3 class="uppercase text-fs-24 xs:text-fs-21 pb-22 text-white font-semibold">What we build</h3>
-                        <div class="flex flex-wrap -mx-10">
-                           <div class="basis-1/2 xs:basis-full px-10 mb-20">
-                              <div class="border border-black-4 rounded-10 p-20 h-full bg-black-2">
-                                 <i class="fa fa-gamepad text-accent text-fs-24 mb-14"></i>
-                                 <h4 class="text-white text-fs-17 font-medium mb-8">Gameplay systems</h4>
-                                 <p class="text-fs-14 leading-lh-1.6 m-0">Core mechanics, player feedback and game feel.</p>
-                              </div>
-                           </div>
-                           <div class="basis-1/2 xs:basis-full px-10 mb-20">
-                              <div class="border border-black-4 rounded-10 p-20 h-full bg-black-2">
-                                 <i class="fa fa-mobile text-accent text-fs-24 mb-14"></i>
-                                 <h4 class="text-white text-fs-17 font-medium mb-8">Mobile games</h4>
-                                 <p class="text-fs-14 leading-lh-1.6 m-0">Production-minded development for mobile players.</p>
-                              </div>
-                           </div>
-                           <div class="basis-1/2 xs:basis-full px-10 mb-20">
-                              <div class="border border-black-4 rounded-10 p-20 h-full bg-black-2">
-                                 <i class="fa fa-code text-accent text-fs-24 mb-14"></i>
-                                 <h4 class="text-white text-fs-17 font-medium mb-8">Unity &amp; C#</h4>
-                                 <p class="text-fs-14 leading-lh-1.6 m-0">Scalable architecture and clean implementation.</p>
-                              </div>
-                           </div>
-                           <div class="basis-1/2 xs:basis-full px-10 mb-20">
-                              <div class="border border-black-4 rounded-10 p-20 h-full bg-black-2">
-                                 <i class="fa fa-puzzle-piece text-accent text-fs-24 mb-14"></i>
-                                 <h4 class="text-white text-fs-17 font-medium mb-8">Integrations</h4>
-                                 <p class="text-fs-14 leading-lh-1.6 m-0">Systems and services connected without friction.</p>
-                              </div>
-                           </div>
-                        </div>
+                     <aside class="studio-intro__brand" aria-label="Ray MarkS Studio focus">
+                        <img src="assets/img/brand/raymarx-mark-white.png" alt="Ray MarkS Studio mark">
+                        <p class="studio-eyebrow">Studio focus</p>
+                        <ul><li><i class="fa fa-gamepad"></i><span>Gameplay systems</span></li><li><i class="fa fa-mobile"></i><span>Mobile game development</span></li><li><i class="fa fa-code"></i><span>Unity &amp; C#</span></li></ul>
+                     </aside>
+                  </section>
+                  <section class="studio-services">
+                     <div class="studio-section-heading"><p class="studio-eyebrow">What we build</p><h3>From first playable to release-ready.</h3></div>
+                     <div class="studio-service-grid">
+                        <article><i class="fa fa-gamepad"></i><h4>Gameplay systems</h4><p>Core mechanics, player feedback and game feel.</p></article>
+                        <article><i class="fa fa-mobile"></i><h4>Mobile games</h4><p>Production-minded development for mobile players.</p></article>
+                        <article><i class="fa fa-code"></i><h4>Unity &amp; C#</h4><p>Scalable architecture and clean implementation.</p></article>
+                        <article><i class="fa fa-puzzle-piece"></i><h4>Integrations</h4><p>Systems and services connected without friction.</p></article>
                      </div>
-                  </div>
-                  <div class="border-t border-black-4 mt-45 pt-35 pb-15">
-                     <p class="uppercase text-accent font-semibold mb-10">Founder-led development</p>
-                     <p class="text-fs-16 leading-lh-1.8 max-w-700 m-0">Each project stays close to its technical and creative intent: from the first playable idea through implementation, iteration and integration with the wider team.</p>
-                  </div>
+                  </section>
+                  <section class="studio-team">
+                     <div class="studio-section-heading"><p class="studio-eyebrow">The people behind the studio</p><h3>Meet the team.</h3><span>Starting with the founder — and designed to grow as the studio grows.</span></div>
+                     <div class="studio-team-grid">
+                        <article class="team-member">
+                           <div class="team-member__portrait"><img src="assets/img/team/oleksandr-markovskiy.jpg" alt="Oleksandr Markovskiy, founder of Ray MarkS Studio"></div>
+                           <div class="team-member__content"><p class="team-member__role">Founder &amp; Game Developer</p><h4>Oleksandr Markovskiy</h4><p>Unity and C# developer focused on building games, gameplay systems and practical features that fit a real production pipeline.</p><div class="team-member__actions"><a href="assets/documents/CV_Markovskiy.pdf" target="_blank" rel="noopener">View developer CV <i class="fa fa-file-pdf-o"></i></a><a href="https://www.linkedin.com/in/oleksandr-markovskiy/" target="_blank" rel="noopener">LinkedIn <i class="fa fa-external-link"></i></a></div></div>
+                        </article>
+                     </div>
+                  </section>
                </div>
                <div class="hidden">
                   <div class="flex flex-row down-lg:flex-col">
@@ -1093,29 +1069,17 @@
                   <div class="text-center mb-45">
                      <p class="uppercase tracking-10 text-fs-13 text-accent mb-16">Legal information</p>
                      <h2 class="text-fs-56 font-black font-Poppins uppercase text-white m-0 down-md:text-fs-42 xs:text-fs-29">Privacy <span class="text-accent">center</span></h2>
-                     <p class="font-Open-sans mt-20 text-fs-16 leading-lh-30 text-black-7 max-w-700 mx-auto">One permanent place for the privacy information of every released game and service.</p>
+                     <p class="font-Open-sans mt-20 text-fs-16 leading-lh-30 text-black-7 max-w-700 mx-auto">Privacy information and direct policy links for Ray MarkS Studio products.</p>
                   </div>
-                  <div class="flex flex-wrap -mx-15">
-                     <div class="lg:basis-7/12 down-lg:basis-full px-15">
-                        <h3 class="text-fs-26 xs:text-fs-21 text-white font-semibold mb-16">Policies will be published per product</h3>
-                        <p class="text-fs-16 leading-lh-1.8 mb-18">A privacy policy must match the actual game, its store listing and the services it uses. Rather than publishing a generic text that could be inaccurate, each policy will be added here after its data flows and third-party SDKs are reviewed.</p>
-                        <p class="text-fs-16 leading-lh-1.8 m-0">Every final policy will have a stable, shareable link suitable for Google Play, the App Store and project websites.</p>
-                     </div>
-                     <div class="lg:basis-5/12 down-lg:basis-full px-15 down-lg:mt-35">
-                        <div class="bg-black-2 border border-black-4 rounded-10 p-25">
-                           <p class="uppercase text-accent text-fs-12 font-semibold mb-10">Before publication</p>
-                           <ul class="text-fs-15 leading-lh-26 m-0 pl-20">
-                              <li>Game name and store links</li>
-                              <li>Analytics, ads and other SDKs</li>
-                              <li>Data collection and retention details</li>
-                              <li>Developer contact and effective date</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="border-t border-black-4 mt-45 pt-30">
-                     <h3 class="uppercase text-fs-21 text-white font-semibold mb-10">Policy index</h3>
-                     <p class="text-fs-15 leading-lh-26 text-black-7 m-0">No product-specific policy is published yet. This index will list each game as soon as its final, verified policy is ready.</p>
+                  <div class="privacy-policy-grid">
+                     <article class="privacy-policy-card privacy-policy-card--available privacy-policy-card--clickable" data-policy-url="../arrow-gallery/privacy/index.html" role="link" tabindex="0" aria-label="Open Arrows privacy policy">
+                        <img src="assets/img/games/arrows-avatar.png" alt="Arrows">
+                        <span class="privacy-policy-card__body"><span class="privacy-policy-card__status">Privacy policy available</span><strong>Arrows</strong><small>View policy <i class="fa fa-arrow-right"></i></small></span>
+                     </article>
+                     <article class="privacy-policy-card privacy-policy-card--multiple privacy-policy-card--clickable" data-policy-url="../wordkeeper/privacy/index.html" role="link" tabindex="0" aria-label="Open WordKeeper privacy policy"><img src="assets/img/games/wordkeeper-avatar.png" alt="WordKeeper"><span class="privacy-policy-card__body"><span class="privacy-policy-card__status">Privacy policy available</span><strong>WordKeeper</strong><small>View policy <i class="fa fa-arrow-right"></i></small><span class="privacy-policy-card__links"><a href="../wordkeeper/account-data-deletion/index.html">Delete account data <i class="fa fa-arrow-right"></i></a></span></span></article>
+                     <article class="privacy-policy-card privacy-policy-card--available privacy-policy-card--clickable" data-policy-url="../rocket-evolution/privacy/index.html" role="link" tabindex="0" aria-label="Open Rocket Evolution privacy policy"><img src="assets/img/games/rocket-evolution-avatar.png" alt="Rocket Evolution"><span class="privacy-policy-card__body"><span class="privacy-policy-card__status">Privacy policy available</span><strong>Rocket Evolution</strong><small>View policy <i class="fa fa-arrow-right"></i></small></span></article>
+                     <article class="privacy-policy-card privacy-policy-card--available privacy-policy-card--clickable" data-policy-url="../tunnel-racing/privacy/index.html" role="link" tabindex="0" aria-label="Open Tunnel Racing privacy policy"><img src="assets/img/games/tunnel-racing-avatar.png" alt="Tunnel Racing"><span class="privacy-policy-card__body"><span class="privacy-policy-card__status">Privacy policy available</span><strong>Tunnel Racing</strong><small>View policy <i class="fa fa-arrow-right"></i></small></span></article>
+                     <article class="privacy-policy-card privacy-policy-card--available privacy-policy-card--clickable" data-policy-url="../slimes-kingdom/privacy/index.html" role="link" tabindex="0" aria-label="Open Slimes Kingdom privacy policy"><img src="assets/img/games/slimes-kingdom-avatar.png" alt="Slimes Kingdom"><span class="privacy-policy-card__body"><span class="privacy-policy-card__status">Privacy policy available</span><strong>Slimes Kingdom</strong><small>View policy <i class="fa fa-arrow-right"></i></small></span></article>
                   </div>
                </div>
             </div>
@@ -1283,16 +1247,40 @@
          <!-- Blog Ends -->
       </div>
       <!-- Main Content Ends -->
+      <footer class="site-footer" aria-label="Ray MarkS Studio footer">
+         <div class="site-footer__inner">
+            <section class="site-footer__brand">
+               <a class="site-footer__logo" href="#home" aria-label="Ray MarkS Studio home"><img src="assets/img/brand/raymarks-logo-white.png" alt="Ray MarkS Studio"></a>
+               <p>Independent game studio creating games and interactive experiences made to be played, remembered and shared.</p>
+               <a class="site-footer__cta" href="#contact">Let’s work together <i class="fa fa-arrow-right"></i></a>
+            </section>
+            <nav class="site-footer__column" aria-label="Site navigation">
+               <h2>Explore</h2><a href="#home">Home</a><a href="#about">Studio</a><a href="#portfolio">Portfolio</a><a href="#privacy">Privacy Center</a>
+            </nav>
+            <section class="site-footer__column">
+               <h2>Contact</h2><a href="mailto:raymarksgames@gmail.com">raymarksgames@gmail.com</a><a href="https://play.google.com/store/apps/developer?id=Ray+MarkS+games&amp;utm_source=ig" target="_blank" rel="noopener">Google Play <i class="fa fa-external-link"></i></a><a href="#contact">Send a message</a>
+            </section>
+            <section class="site-footer__column">
+               <h2>Follow</h2><a href="https://www.instagram.com/raymarks_games/" target="_blank" rel="noopener">Instagram <i class="fa fa-external-link"></i></a><a href="https://www.youtube.com/@Ray_MarkS_studio" target="_blank" rel="noopener">YouTube <i class="fa fa-external-link"></i></a><a href="https://www.tiktok.com/@ray_marks_studio" target="_blank" rel="noopener">TikTok <i class="fa fa-external-link"></i></a><a href="https://www.linkedin.com/in/oleksandr-markovskiy/" target="_blank" rel="noopener">LinkedIn <i class="fa fa-external-link"></i></a>
+            </section>
+         </div>
+         <div class="site-footer__bottom"><span>© <span id="footer-year">2026</span> Ray MarkS Studio. All rights reserved.</span><a href="#privacy">Privacy Center</a></div>
+      </footer>
       <!-- Project modal starts -->
       <div class="project-modal" id="project-modal" hidden>
          <div class="project-modal__backdrop" data-project-modal-close></div>
          <section class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" tabindex="-1">
             <button class="project-modal__close" type="button" aria-label="Close project details" data-project-modal-close><i class="fa fa-times"></i></button>
-            <div class="project-modal__media"><img id="project-modal-image" src="" alt=""></div>
             <div class="project-modal__content">
-               <p class="project-modal__eyebrow" id="project-modal-category"></p>
-               <h2 id="project-modal-title"></h2>
-               <p id="project-modal-description"></p>
+               <div class="project-modal__intro">
+                  <div class="project-modal__media"><img id="project-modal-image" src="" alt=""></div>
+                  <div class="project-modal__summary">
+                     <p class="project-modal__eyebrow" id="project-modal-category"></p>
+                     <h2 id="project-modal-title"></h2>
+                     <p id="project-modal-description"></p>
+                  </div>
+               </div>
+               <div id="project-modal-extra"></div>
                <p class="project-modal__note">More project details and links will be added as they are cleared for publication.</p>
             </div>
          </section>
@@ -1310,6 +1298,7 @@
       <script src="assets/js/language-switcher.js"></script>
       <script src="assets/js/contact-form.js"></script>
       <script src="assets/js/project-modal.js"></script>
+      <script src="assets/js/privacy-center.js"></script>
       <script src="assets/js/custom.js"></script>
    </body>
 </html>

@@ -3,7 +3,14 @@
   if (!modal) return;
 
   var details = {
-    'Arrows': ['Original game', 'An atmospheric art-puzzle experience built around illustrated scenes and visual discovery.'],
+    'Arrows': ['Original game', 'An atmospheric art-puzzle experience built around illustrated scenes and visual discovery.', {
+      gallery: [
+        ['assets/img/projects/arrows/lantern-in-rain.png', 'Lantern in rain'],
+        ['assets/img/projects/arrows/glasshouse-at-dawn.png', 'Glasshouse at dawn'],
+        ['assets/img/projects/arrows/night-train.png', 'Night train compartment']
+      ],
+      youtube: '_R9WsINO3UM'
+    }],
     'WordKeeper': ['Original game', 'A playful word-learning experience with a character-led visual system.'],
     'Rocket Evolution': ['Original game', 'A sci-fi game project built around rocket-themed progression and discovery.'],
     'Tunnel Racing': ['Original game', 'A racing project built around high-speed tunnel runs.'],
@@ -22,6 +29,7 @@
   var title = document.getElementById('project-modal-title');
   var category = document.getElementById('project-modal-category');
   var description = document.getElementById('project-modal-description');
+  var extra = document.getElementById('project-modal-extra');
   var image = document.getElementById('project-modal-image');
   var dialog = modal.querySelector('.project-modal__dialog');
   var lastFocusedElement;
@@ -44,9 +52,64 @@
     description.textContent = projectDetails[1];
     image.src = artwork.currentSrc || artwork.src;
     image.alt = artwork.alt;
+    extra.replaceChildren();
+    renderExtra(projectDetails[2]);
     modal.hidden = false;
     document.body.classList.add('project-modal-open');
     dialog.focus();
+  }
+
+  function renderExtra(projectExtra) {
+    if (!projectExtra) return;
+    if (projectExtra.video) {
+      var videoSection = document.createElement('section');
+      var videoHeading = document.createElement('h3');
+      var video = document.createElement('video');
+      videoSection.className = 'project-modal__section';
+      videoHeading.textContent = 'Video';
+      video.className = 'project-modal__video';
+      video.controls = true;
+      video.preload = 'metadata';
+      video.src = projectExtra.video;
+      videoSection.append(videoHeading, video);
+      extra.append(videoSection);
+    }
+    if (projectExtra.youtube) {
+      var youtubeSection = document.createElement('section');
+      var youtubeHeading = document.createElement('h3');
+      var youtubeFrame = document.createElement('iframe');
+      youtubeSection.className = 'project-modal__section';
+      youtubeHeading.textContent = 'Gameplay video';
+      youtubeFrame.className = 'project-modal__video-frame';
+      youtubeFrame.src = 'https://www.youtube-nocookie.com/embed/' + projectExtra.youtube + '?rel=0';
+      youtubeFrame.title = 'Gameplay video';
+      youtubeFrame.loading = 'lazy';
+      youtubeFrame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      youtubeFrame.allowFullscreen = true;
+      youtubeSection.append(youtubeHeading, youtubeFrame);
+      extra.append(youtubeSection);
+    }
+    if (projectExtra.gallery && projectExtra.gallery.length) {
+      var gallerySection = document.createElement('section');
+      var galleryHeading = document.createElement('h3');
+      var gallery = document.createElement('div');
+      gallerySection.className = 'project-modal__section';
+      galleryHeading.textContent = 'Screenshots';
+      gallery.className = 'project-modal__gallery';
+      projectExtra.gallery.forEach(function (item) {
+        var figure = document.createElement('figure');
+        var galleryImage = document.createElement('img');
+        var caption = document.createElement('figcaption');
+        galleryImage.src = item[0];
+        galleryImage.alt = item[1];
+        galleryImage.loading = 'lazy';
+        caption.textContent = item[1];
+        figure.append(galleryImage, caption);
+        gallery.append(figure);
+      });
+      gallerySection.append(galleryHeading, gallery);
+      extra.append(gallerySection);
+    }
   }
 
   document.querySelectorAll('.portfolio-showcase-grid figure').forEach(function (card) {
