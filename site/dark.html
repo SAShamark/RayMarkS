@@ -1283,6 +1283,21 @@
          <!-- Blog Ends -->
       </div>
       <!-- Main Content Ends -->
+      <!-- Project modal starts -->
+      <div class="project-modal" id="project-modal" hidden>
+         <div class="project-modal__backdrop" data-project-modal-close></div>
+         <section class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" tabindex="-1">
+            <button class="project-modal__close" type="button" aria-label="Close project details" data-project-modal-close><i class="fa fa-times"></i></button>
+            <div class="project-modal__media"><img id="project-modal-image" src="" alt=""></div>
+            <div class="project-modal__content">
+               <p class="project-modal__eyebrow" id="project-modal-category"></p>
+               <h2 id="project-modal-title"></h2>
+               <p id="project-modal-description"></p>
+               <p class="project-modal__note">More project details and links will be added as they are cleared for publication.</p>
+            </div>
+         </section>
+      </div>
+      <!-- Project modal ends -->
       <!-- Template JS Files -->
       <script src="assets/js/jquery-3.7.1.min.js"></script>
       <script src="assets/js/imagesloaded.pkgd.min.js"></script>
@@ -1294,6 +1309,7 @@
       <script src="assets/js/menu.js"></script>
       <script src="assets/js/language-switcher.js"></script>
       <script src="assets/js/contact-form.js"></script>
+      <script src="assets/js/project-modal.js"></script>
       <script src="assets/js/custom.js"></script>
    </body>
 </html>
