@@ -1,14 +1,14 @@
 (function () {
   var translations = {
     en: {
-      'hero-kicker': 'Independent game development studio',
-      'hero-description': 'Creating polished, memorable game experiences — from gameplay systems to release-ready products.',
-      'hero-action': 'explore games'
+      'hero-kicker': 'Independent game studio',
+      'hero-description': 'Original games. Memorable experiences.',
+      'hero-action': 'explore our games'
     },
     uk: {
-      'hero-kicker': 'Незалежна студія розробки ігор',
-      'hero-description': 'Створюємо захопливі ігрові проєкти — від геймплейних систем до готового продукту.',
-      'hero-action': 'переглянути ігри'
+      'hero-kicker': 'Незалежна ігрова студія',
+      'hero-description': 'Оригінальні ігри. Яскраві враження.',
+      'hero-action': 'переглянути наші ігри'
     }
   };
 
