@@ -1,7 +1,7 @@
 (function () {
    'use strict';
 
-   var sectionIds = ['home', 'about', 'games', 'portfolio', 'contact', 'privacy'];
+   var sectionIds = ['home', 'about', 'portfolio', 'contact', 'privacy'];
    var desktopItems = Array.from(document.querySelectorAll('#desktop-nav .desktop-nav-element'));
    var mobileItems = Array.from(document.querySelectorAll('#mobile-nav .mobile-nav-element'));
    var mobileToggle = document.getElementById('inputmobile');

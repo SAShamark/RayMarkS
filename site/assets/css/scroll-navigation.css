@@ -24,6 +24,7 @@ body { overflow-x: hidden; overflow-y: auto !important; }
 
 /* The template's unused blog demo is not part of the studio website. */
 #blog { display: none !important; }
+#games { display: none !important; }
 
 /* Portfolio keeps the original template's visual rhythm while supporting scroll. */
 .portfolio-showcase-grid {
@@ -31,6 +32,23 @@ body { overflow-x: hidden; overflow-y: auto !important; }
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
 }
+
+.portfolio-section-heading { margin: 0 0 22px; }
+.portfolio-section-heading p {
+  margin: 0 0 5px;
+  color: #ffb400;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.portfolio-section-heading h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+}
+.portfolio-section-heading--secondary { margin-top: 58px; }
 
 .portfolio-showcase figure {
   position: relative;
