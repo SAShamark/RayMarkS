@@ -28,23 +28,7 @@ body { overflow-x: hidden; overflow-y: auto !important; }
 
 /* Home: a restrained studio showcase in the Tunis visual language. */
 .hero-showcase { width: min(37vw, 575px); height: calc(100vh - 80px); }
-.hero-showcase__brand {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  width: max-content;
-  max-width: 92%;
-  padding: 12px 18px 12px 13px;
-  border: 1px solid rgba(255,255,255,.17);
-  border-radius: 12px;
-  background: rgba(30,30,30,.92);
-  box-shadow: 0 12px 30px rgba(0,0,0,.28);
-}
-.hero-showcase__brand img { width: 42px; height: 42px; object-fit: contain; }
-.hero-showcase__brand span, .hero-mobile-brand span { color: #fff; font: 600 18px/1 Poppins, sans-serif; }
-.hero-showcase__cards { position: absolute; inset: 68px 0 0; }
+.hero-showcase__cards { position: absolute; inset: 0; }
 .hero-game-card {
   position: absolute;
   margin: 0;
@@ -64,7 +48,6 @@ body { overflow-x: hidden; overflow-y: auto !important; }
 .hero-game-card--arrows:hover, .hero-game-card--wordkeeper:hover, .hero-game-card--rocket:hover { transform: translateY(-8px) scale(1.025) rotate(0); }
 .hero-mobile-brand { align-items: center; justify-content: center; gap: 10px; margin: 0 auto 25px; }
 .hero-mobile-brand img { width: 48px; height: 48px; object-fit: contain; }
-.hero-title { text-align: center; }
 
 /* Studio: compact editorial layout instead of template resume cards. */
 .studio-layout { padding-top: 20px; padding-bottom: 65px; }
@@ -143,7 +126,7 @@ body { overflow-x: hidden; overflow-y: auto !important; }
 .contact-details a { display: flex; gap: 14px; align-items: center; margin: 18px 0; color: #fff; font-weight: 600; }
 .contact-details i { width: 40px; height: 40px; border-radius: 8px; display: grid; place-items: center; color: #fff; background: #ffb400; font-size: 20px; }
 .contact-link-icon { width: 40px; height: 40px; border-radius: 8px; display: grid; flex: 0 0 40px; place-items: center; background: #ffb400; }
-.google-play-icon { width: 25px; height: 25px; }
+.google-play-icon { width: 25px; height: 25px; object-fit: contain; }
 .contact-details small { display: block; color: #aaa; font-size: 12px; font-weight: 400; text-transform: uppercase; }
 .contact-socials { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; padding: 0; list-style: none; }
 .contact-socials a { display: grid; width: 40px; height: 40px; place-items: center; margin: 0; border-radius: 50%; background: #2b2a2a; color: #fff; font-size: 17px; transition: background-color 200ms ease; }
