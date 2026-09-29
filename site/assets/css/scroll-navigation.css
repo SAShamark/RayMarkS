@@ -19,8 +19,18 @@ body { overflow-x: hidden; overflow-y: auto !important; }
 }
 
 .page { scroll-margin-top: 24px; }
-#home { min-height: 100vh; }
+#home { min-height: 100vh; overflow: hidden !important; }
 #home > .bg-accent { position: absolute; }
+
+/* Studio: compact editorial layout instead of template resume cards. */
+.studio-layout { padding-top: 20px; padding-bottom: 65px; }
+.studio-layout > .flex { align-items: center; }
+.studio-layout h3 { letter-spacing: 0; }
+.studio-layout .border-t { margin-top: 35px; }
+.studio-brand-mark { display: grid; min-height: 150px; margin: 0 0 24px; place-items: center; border: 1px solid #333; border-radius: 10px; background: radial-gradient(circle at center, #282828 0, #1c1c1c 72%); }
+.studio-brand-mark img { width: min(190px, 58%); max-height: 128px; object-fit: contain; }
+#about .bg-black-2 { transition: border-color 200ms ease, transform 200ms ease; }
+#about .bg-black-2:hover { border-color: #ffb400; transform: translateY(-3px); }
 
 /* The template's unused blog demo is not part of the studio website. */
 #blog { display: none !important; }
