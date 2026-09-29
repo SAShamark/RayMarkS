@@ -1046,24 +1046,25 @@
                   <span class="text-fs-110 absolute left-0 right-0 top-1/2 tracking-10 leading-lh-0.7 font-extrabold text-muted -translate-y-1/2 uppercase xs:hidden">contact</span>
                </div>
                <!-- Section Title Ends -->
-               <div class="xl:max-w-1140 custom-md-3:max-w-[calc(100%-195px)] lg:max-w-960 md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto px-15 xs:px-25">
-                  <div class="flex flex-wrap -mx-15">
-                     <div class="lg:basis-7/12 down-lg:basis-full px-15">
-                        <p class="uppercase text-accent font-semibold mb-12">New projects &amp; collaboration</p>
-                        <h3 class="text-fs-29 xs:text-fs-26 leading-lh-1.4 text-white font-semibold mb-18">Let’s make the next game feel great to play.</h3>
-                        <p class="text-fs-16 leading-lh-1.8 mb-30">For collaboration, game-development opportunities or a conversation about a project, email is the most direct channel. Behance is also available for portfolio-specific messages.</p>
-                        <a href="mailto:raymarksgames@gmail.com" class="btn btn-download uppercase text-fs-15 font-medium text-white inline-block rounded-35 relative pl-29 pr-70 leading-lh-51 h-55 border border-accent overflow-hidden">
-                           <span class="relative z-10">raymarksgames@gmail.com</span>
-                           <span class="absolute right-0 top-0 bottom-0 w-55 flex items-center justify-center bg-accent text-white"><i class="fa fa-envelope"></i></span>
-                        </a>
-                     </div>
-                     <div class="lg:basis-5/12 down-lg:basis-full px-15 down-lg:mt-45">
-                        <div class="bg-black-2 border border-black-4 rounded-10 p-25">
-                           <i class="fa fa-paper-plane text-accent text-fs-26 mb-14"></i>
-                           <h3 class="text-white text-fs-21 font-semibold mb-10">A clear contact path</h3>
-                           <p class="text-fs-15 leading-lh-1.7 m-0">Use the studio email for new inquiries. On Behance, your message stays attached to the portfolio it refers to.</p>
-                        </div>
-                     </div>
+               <div class="contact-layout xl:max-w-1140 custom-md-3:max-w-[calc(100%-195px)] lg:max-w-960 md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto px-15 xs:px-25">
+                  <div class="contact-details">
+                     <h3>Let’s work together.</h3>
+                     <p>Have a game idea, a collaboration proposal or a role in mind? Send a message and let’s talk.</p>
+                     <a class="contact-email" href="mailto:raymarksgames@gmail.com"><i class="fa fa-envelope-open"></i><span><small>Email</small>raymarksgames@gmail.com</span></a>
+                     <a class="contact-behance" href="https://www.behance.net/35c70eca" target="_blank" rel="noopener"><i class="fa fa-behance"></i><span><small>Portfolio</small>Behance</span></a>
+                     <ul class="contact-socials" aria-label="RayMarkS Games social links">
+                        <li><a href="https://play.google.com/store/apps/developer?id=Ray+MarkS+games&amp;utm_source=ig" target="_blank" rel="noopener" aria-label="RayMarkS Games on Google Play"><i class="fa fa-android"></i></a></li>
+                        <li><a href="https://www.instagram.com/raymarks_games/" target="_blank" rel="noopener" aria-label="RayMarkS Games on Instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/@Ray_MarkS_studio" target="_blank" rel="noopener" aria-label="RayMarkS Games on YouTube"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@ray_marks_studio" target="_blank" rel="noopener" aria-label="RayMarkS Games on TikTok">♪</a></li>
+                        <li><a href="https://www.linkedin.com/in/oleksandr-markovskiy/" target="_blank" rel="noopener" aria-label="Oleksandr Markovskiy on LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                     </ul>
+                  </div>
+                  <form id="contact-form" class="contact-form">
+                     <div class="contact-form-row"><input name="name" type="text" autocomplete="name" placeholder="YOUR NAME" required><input name="email" type="email" autocomplete="email" placeholder="YOUR EMAIL" required><input name="subject" type="text" placeholder="YOUR SUBJECT" required></div>
+                     <textarea name="message" placeholder="YOUR MESSAGE" required></textarea>
+                     <button type="submit" class="button"><span>send message</span><i class="fa fa-send"></i></button>
+                  </form>
                   </div>
                </div>
             </div>
@@ -1275,6 +1276,7 @@
       <script src="assets/js/cbpGridGallery.js"></script>
       <script src="assets/js/jquery.hoverdir.js"></script>
       <script src="assets/js/menu.js"></script>
+      <script src="assets/js/contact-form.js"></script>
       <script src="assets/js/custom.js"></script>
    </body>
 </html>

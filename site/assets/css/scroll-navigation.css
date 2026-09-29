@@ -81,12 +81,32 @@ body { overflow-x: hidden; overflow-y: auto !important; }
 
 .portfolio-showcase figure:hover img { transform: scale(1.05); }
 
+.contact-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 50px; padding-bottom: 70px; }
+.contact-details h3 { margin: 0 0 24px; color: #fff; font-size: 26px; text-transform: uppercase; }
+.contact-details > p { margin: 0 0 28px; line-height: 1.8; }
+.contact-details a { display: flex; gap: 14px; align-items: center; margin: 18px 0; color: #fff; font-weight: 600; }
+.contact-details i { width: 40px; height: 40px; border-radius: 8px; display: grid; place-items: center; color: #fff; background: #ffb400; font-size: 20px; }
+.contact-details small { display: block; color: #aaa; font-size: 12px; font-weight: 400; text-transform: uppercase; }
+.contact-socials { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; padding: 0; list-style: none; }
+.contact-socials a { display: grid; width: 40px; height: 40px; place-items: center; margin: 0; border-radius: 50%; background: #2b2a2a; color: #fff; font-size: 17px; transition: background-color 200ms ease; }
+.contact-socials a:hover { background: #ffb400; }
+.contact-socials i { display: inline; width: auto; height: auto; border-radius: 0; background: transparent; color: inherit; font-size: inherit; }
+.contact-form-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.contact-form input, .contact-form textarea { box-sizing: border-box; width: 100%; border: 1px solid #111; border-radius: 30px; outline: 0; background: #2b2a2a; color: #fff; font: inherit; }
+.contact-form input { padding: 14px 24px; }
+.contact-form textarea { min-height: 200px; margin: 28px 0; padding: 18px 24px; resize: vertical; }
+.contact-form button { border: 1px solid #ffb400; background: transparent; color: #fff; }
+.contact-form button i { margin-left: 24px; }
+
 @media (max-width: 991px) {
   .portfolio-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-layout { grid-template-columns: 1fr; gap: 35px; }
 }
 
 @media (max-width: 576px) {
   .portfolio-showcase-grid { grid-template-columns: 1fr; gap: 20px; }
+  .contact-form-row { grid-template-columns: 1fr; gap: 14px; }
+  .contact-form textarea { margin: 14px 0 24px; }
 }
 
 @media (max-width: 576px) {
