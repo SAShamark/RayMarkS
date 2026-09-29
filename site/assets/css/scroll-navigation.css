@@ -112,6 +112,7 @@ body { overflow-x: hidden; overflow-y: auto !important; }
   background: #2b2a2a;
 }
 .portfolio-showcase-grid--games figure { aspect-ratio: 1; }
+.portfolio-showcase-grid--games .portfolio-cover-card img { object-position: center; }
 
 .portfolio-showcase img {
   display: block;
