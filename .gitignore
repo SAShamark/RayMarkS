@@ -1,0 +1,5 @@
+# Local source archive: kept on this computer, not deployed to GitHub Pages.
+ResourcesForSite/
+
+# Local dependency folders.
+node_modules/

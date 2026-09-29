@@ -1,0 +1,1303 @@
+﻿<!DOCTYPE html>
+<html class="overflow-x-hidden h-full" lang="en">
+   <head>
+   <meta charset="utf-8">
+   <title>Markovskiy Games — Independent Game Development Studio</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Markovskiy Games is an independent game development studio showcasing Unity and C# game projects, gameplay systems and development work.">
+      <meta name="theme-color" content="#ffb400">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Markovskiy Games — Independent Game Development Studio">
+      <meta property="og:description" content="Game projects, gameplay systems and development work by Markovskiy Games.">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Markovskiy Games — Independent Game Development Studio">
+      <meta name="twitter:description" content="Game projects, gameplay systems and development work by Markovskiy Games.">
+      <!-- Template Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+      <!-- Template CSS Files -->
+      <link rel="stylesheet" href="assets/css/circle.css" >
+      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/css/component.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <!-- CSS Skin File -->
+      <link rel="stylesheet" href="assets/css/skins/yellow.css">
+      <!-- Modernizr JS File -->
+      <script src="assets/js/modernizr.min.js"></script>
+   </head>
+   <body class="home dark font-Poppins text-fs-16 text-white font-medium leading-lh-1.6 relative w-full h-full bg-black overflow-hidden">
+      <!-- Preloader Starts -->
+      <div id="preloader" class="fixed z-100 group left-0 top-0 h-screen w-full flex justify-center items-center pointer-events-none before:absolute before:left-0 before:top-0 before:w-1/2 before:h-full before:bg-black-3 before:transition-all before:duration-300 after:absolute after:right-0 after:top-0 after:w-1/2 after:h-full after:bg-black-3 after:transition-all after:duration-300 [&.preloaded]:before:animate-finishanimation [&.preloaded]:after:animate-finishanimation">
+         <div class="line m-0 h-250 w-3 rounded-4 relative overflow-hidden transition-all duration-700 before:animate-animateline before:z-10 before:absolute before:left-0 before:top-1/2 before:w-3 before:h-0 before:-translate-y-1/2 after:animate-animatebgline after:absolute after:left-0 after:w-1 after:h-full after:bg-transparent after:-translate-y-full group-[.preloaded]:opacity-0 group-[.preloaded]:!h-full group-[.preloaded]:after:opacity-0"></div>
+      </div>
+      <!-- Preloader Ends -->
+      <!-- Header Starts -->
+      <header class="header from-lg:fixed from-lg:right-30 from-lg:bottom-0 from-lg:z-30 from-lg:flex from-lg:items-center from-lg:h-[calc(100vh-200px)] from-lg:top-100 from-lg:opacity-100 from-lg:transition from-lg:duration-300 from-lg:[&.hide-header]:z-0 from-lg:[&.hide-header]:opacity-0" id="navbar-collapse-toggle">
+         <!-- Fixed Desktop Navigation Starts -->
+         <ul id="desktop-nav" class="icon-menu down-lg:hidden from-md:block uppercase">
+            <li class="desktop-nav-element cursor-pointer w-50 h-50 relative flex items-center transition duration-300 my-20 mx-0 rounded-full bg-black-2 active">
+               <i class="fa fa-home absolute left-0 right-0 mx-auto block text-center top-15 pointer-events-none text-fs-19"></i>
+               <div class="group block p-0 w-50 h-50" >
+                  <h2 class="absolute text-center -z-10 block h-50 pr-25 pl-30 text-fs-15 right-0 opacity-0 text-white leading-lh-50 font-medium transition-all duration-300 rounded-30 group-hover:opacity-100 group-hover:right-27 group-hover:rounded-tl-30 group-hover:rounded-bl-30 group-hover:rounded-tr-none group-hover:rounded-br-none">Home</h2>
+               </div>
+            </li>
+            <li class="desktop-nav-element cursor-pointer w-50 h-50 relative flex items-center transition duration-300 my-20 mx-0 rounded-full bg-black-2">
+               <i class="fa fa-user absolute left-0 right-0 mx-auto block text-center top-15 pointer-events-none text-fs-19"></i>
+               <div class="group block p-0 w-50 h-50" >
+                  <h2 class="absolute text-center -z-10 block h-50 pr-25 pl-30 text-fs-15 right-0 opacity-0 text-white leading-lh-50 font-medium transition-all duration-300 rounded-30 group-hover:opacity-100 group-hover:right-27 group-hover:rounded-tl-30 group-hover:rounded-bl-30 group-hover:rounded-tr-none group-hover:rounded-br-none">Studio</h2>
+               </div>
+            </li>
+            <li class="desktop-nav-element cursor-pointer w-50 h-50 relative flex items-center transition duration-300 my-20 mx-0 rounded-full bg-black-2">
+               <i class="fa fa-gamepad absolute left-0 right-0 mx-auto block text-center top-15 pointer-events-none text-fs-19"></i>
+               <div class="group block p-0 w-50 h-50">
+                  <h2 class="absolute text-center -z-10 block h-50 pr-25 pl-30 text-fs-15 right-0 opacity-0 text-white leading-lh-50 font-medium transition-all duration-300 rounded-30 group-hover:opacity-100 group-hover:right-27 group-hover:rounded-tl-30 group-hover:rounded-bl-30 group-hover:rounded-tr-none group-hover:rounded-br-none">Games</h2>
+               </div>
+            </li>
+            <li class="desktop-nav-element cursor-pointer w-50 h-50 relative flex items-center transition duration-300 my-20 mx-0 rounded-full bg-black-2">
+               <i class="fa fa-briefcase absolute left-0 right-0 mx-auto block text-center top-15 pointer-events-none text-fs-19"></i>
+               <div class="group block p-0 w-50 h-50">
+                  <h2 class="absolute text-center -z-10 block h-50 pr-25 pl-30 text-fs-15 right-0 opacity-0 text-white leading-lh-50 font-medium transition-all duration-300 rounded-30 group-hover:opacity-100 group-hover:right-27 group-hover:rounded-tl-30 group-hover:rounded-bl-30 group-hover:rounded-tr-none group-hover:rounded-br-none">Portfolio</h2>
+               </div>
+            </li>
+            <li class="desktop-nav-element cursor-pointer w-50 h-50 relative flex items-center transition duration-300 my-20 mx-0 rounded-full bg-black-2">
+               <i class="fa fa-envelope-open absolute left-0 right-0 mx-auto block text-center top-15 pointer-events-none text-fs-19"></i>
+               <div class="group block p-0 w-50 h-50">
+                  <h2 class="absolute text-center -z-10 block h-50 pr-25 pl-30 text-fs-15 right-0 opacity-0 text-white leading-lh-50 font-medium transition-all duration-300 rounded-30 group-hover:opacity-100 group-hover:right-27 group-hover:rounded-tl-30 group-hover:rounded-bl-30 group-hover:rounded-tr-none group-hover:rounded-br-none">Contact</h2>
+               </div>
+            </li>
+            <li class="desktop-nav-element cursor-pointer w-50 h-50 relative flex items-center transition duration-300 my-20 mx-0 rounded-full bg-black-2">
+               <i class="fa fa-shield absolute left-0 right-0 mx-auto block text-center top-15 pointer-events-none text-fs-19"></i>
+               <div class="group block p-0 w-50 h-50">
+                  <h2 class="absolute text-center -z-10 block h-50 pr-25 pl-30 text-fs-15 right-0 opacity-0 text-white leading-lh-50 font-medium transition-all duration-300 rounded-30 group-hover:opacity-100 group-hover:right-27 group-hover:rounded-tl-30 group-hover:rounded-bl-30 group-hover:rounded-tr-none group-hover:rounded-br-none">Privacy</h2>
+               </div>
+            </li>
+         </ul>
+         <!-- Fixed Desktop Navigation Ends -->
+         <!-- Mobile Menu Starts -->
+         <nav class="hidden down-md:block relative">
+            <div id="menuToggle" class="fixed top-30 right-30 z-50 select-none pt-19 pl-16 w-54 h-54 rounded-5 bg-black-3 xs:right-15 xs:top-4 xs:pb-13 xs:w-49 xs:h-49">
+               <input id="inputmobile" class="h-54 w-54 absolute top-0 left-0 opacity-0 z-20 cursor-pointer peer" type="checkbox">
+               <span class="flex h-0.5 w-23 mb-5 relative bg-white z-10 rounded-3 origin-0 custom-transition peer-checked:rotate-45 peer-checked:translate-x-1 peer-checked:translate-y-0"></span>
+               <span class="flex h-0.5 w-23 mb-5 relative bg-white z-10 rounded-3 origin-0-100 custom-transition peer-checked:opacity-0 peer-checked:scale-0-2"></span>
+               <span class="flex h-0.5 w-23 mb-5 relative bg-white z-10 rounded-3 origin-0-100 custom-transition peer-checked:-rotate-45 peer-checked:translate-x-2 peer-checked:translate-y-2"></span>
+               <ul class="fixed m-0 left-0 top-0 w-full h-full pt-60 bg-black-3 -translate-x-full ease-menu-mobile duration-500 peer-checked:transform-none [&>li]:cursor-pointer [&>li]:after:absolute [&>li]:after:h-px [&>li]:after:w-[calc(100%-60px)] [&>li]:after:bg-black-4 [&>li]:after:left-30 [&>li:last-child]:after:hidden" id="mobile-nav">
+                  <li class="mobile-nav-element active relative pl-30 home-link">
+                     <div class="uppercase delay-2000 no-underline relative text-fs-26 xs:text-fs-18 py-14">
+                        <i class="fa fa-home"></i>
+                        <span class="absolute left-50 xs:left-35 font-normal">Home</span>
+                     </div>
+                  </li>
+                  <li class="mobile-nav-element relative pl-30">
+                     <div class="uppercase delay-2000 no-underline relative text-fs-26 xs:text-fs-18 py-14">
+                        <i class="fa fa-user"></i>
+                        <span class="absolute left-50 xs:left-35 font-normal">Studio</span>
+                     </div>
+                  </li>
+                  <li class="mobile-nav-element relative pl-30">
+                     <div class="uppercase delay-2000 no-underline relative text-fs-26 xs:text-fs-18 py-14">
+                        <i class="fa fa-gamepad"></i>
+                        <span class="absolute left-50 xs:left-35 font-normal">Games</span>
+                     </div>
+                  </li>
+                  <li class="mobile-nav-element relative pl-30">
+                     <div class="uppercase delay-2000 no-underline relative text-fs-26 xs:text-fs-18 py-14">
+                        <i class="fa fa-folder-open"></i>
+                        <span class="absolute left-50 xs:left-35 font-normal">Portfolio</span>
+                     </div>
+                  </li>
+                  <li class="mobile-nav-element relative pl-30">
+                     <div class="uppercase delay-2000 no-underline relative text-fs-26 xs:text-fs-18 py-14">
+                        <i class="fa fa-envelope-open"></i>
+                        <span class="absolute left-50 xs:left-35 font-normal">Contact</span>
+                     </div>
+                  </li>
+                  <li class="mobile-nav-element relative pl-30">
+                     <div class="uppercase delay-2000 no-underline relative text-fs-26 xs:text-fs-18 py-14">
+                        <i class="fa fa-shield"></i>
+                        <span class="absolute left-50 xs:left-35 font-normal">Privacy</span>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+         <!-- Mobile Menu Ends -->
+      </header>
+      <!-- Header Ends -->
+      <!-- Main Content Starts -->
+      <div class="w-full h-full pages overflow-hidden">
+         <!-- Home Starts -->
+         <div class="page page--current" id="home">
+            <div class="bg-accent fixed w-full h-200prcnt -rotate-15 -top-1/2 -left-83prcnt hidden from-lg:block"></div>
+            <div class="flex items-center h-screen w-full down-lg:mx-auto down-lg:justify-center xs:text-left down-lg:text-center ">
+               <!-- Desktop Image Starts -->
+               <img class="hidden from-lg:block fixed w-1/3 h-[calc(100vh-80px)] left-40 top-40 rounded-30 shadow-1 object-cover" src="assets/img/hero/pikamoon.png" alt="Pikamoon gameplay">
+               <!-- Desktop Image Ends -->
+               <div class="from-lg:ml-100/3 from-lg:w-2/3">
+                  <div class="mx-auto max-w-550 custom-md-1:max-w-450">
+                     <!-- Mobile Image Starts -->
+                     <img src="assets/img/hero/pikamoon.png" class="hidden down-lg:block xs:!hidden rounded-full w-270 h-270 mx-auto mb-25 border-4 border-solid border-black-3 object-cover" alt="Pikamoon gameplay">
+                     <!-- Mobile Image Ends -->
+                     <!-- Informations Starts -->
+                     <p class="font-Open-sans uppercase text-fs-13 tracking-10 text-black-7 mb-12">Independent game development studio</p>
+                     <h1 class="text-fs-51 text-accent font-Poppins relative uppercase font-bold leading-lh-62 pl-70 before:absolute before:left-0 before:top-29 before:h-4 before:w-40 before:rounded-10 custom-md-2:text-fs-42 down-xl:before:hidden down-xl:pl-0 custom-md-2:leading-lh-52 down-md:text-fs-38 down-md:leading-lh-48 down-md:mt-29 down-md:mb-13 xs:text-fs-29 xs:leading-lh-39 xs:mt-18">Markovskiy<span class="block text-white">Games</span></h1>
+                     <p class="font-Open-sans mt-15 mb-28 leading-lh-35 down-lg:mt-2.5 down-lg:mb-23 down-lg:text-fs-15 down-lg:leading-lh-30">Creating polished, memorable game experiences — from gameplay systems to release-ready products.</p>
+                     <div id="link-games" class="button cursor-pointer overflow-hidden inline-block leading-lh-1.4 rounded-30 text-ellipsis text-center align-middle select-none transition-all duration-250 ease-in-out uppercase no-underline relative z-10 py-16 pr-70 pl-35 text-fs-15 font-semibold text-white bg-transparent outline-0 before:absolute before:-z-10 before:left-0 before:right-0 before:top-0 before:bottom-0 before:translate-x-full hover:before:translate-x-0 before:transition before:duration-300 before:ease-out">
+                        <span class="relative z-20 text-white">explore games</span>
+                        <span class="absolute -right-px bottom-0 w-55 h-55 flex items-center justify-center rounded-full text-white text-fs-19 fa fa-arrow-right bg-accent"></span>
+                     </div>
+                     <!-- Informations Ends -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Home Ends -->
+         <!-- About Starts -->
+         <div class="page" id="about">
+            <div class="w-full">
+              <!-- Section Title Starts -->
+               <div class="mx-auto w-full relative py-80 text-center xs:px-25 xs:pt-16 xs:pb-14 xs:bg-black-3 xs:border-b xs:border-black-4 xs:fixed xs:left-0 xs:right-0 xs:top-0 xs:z-20">
+                  <h2 class="text-fs-56 font-black font-Poppins uppercase text-white m-0 xs:text-fs-26 xs:text-left xs:leading-lh-1.2">
+                     about <span class="text-accent">the studio</span>
+                  </h2>
+                  <span class="text-fs-110 absolute left-0 right-0 top-1/2 tracking-10 leading-lh-0.7 font-extrabold text-muted -translate-y-1/2 uppercase xs:hidden">studio</span>
+               </div>
+               <!-- Section Title Ends -->
+               <div class="xl:max-w-1140 custom-md-3:max-w-[calc(100%-195px)] lg:max-w-960 md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto px-15 xs:px-25">
+                  <div class="flex flex-wrap -mx-15">
+                     <div class="xl:basis-7/12 lg:basis-1/2 down-lg:basis-full px-15">
+                        <p class="uppercase text-accent font-semibold mb-12">Independent game development</p>
+                        <h3 class="text-fs-29 xs:text-fs-26 leading-lh-1.4 text-white font-semibold mb-18">Small studio. Full production focus.</h3>
+                        <p class="text-fs-16 leading-lh-1.8 mb-18">Markovskiy Games is an independent game-development practice led by Oleksandr Markovskiy — a Unity and C# developer with commercial experience building games and gameplay systems.</p>
+                        <p class="text-fs-16 leading-lh-1.8 mb-30">The focus is on clear, responsive gameplay, maintainable technical foundations and features that integrate smoothly into a real production pipeline.</p>
+                        <a href="assets/documents/CV_Markovskiy.pdf" target="_blank" rel="noopener" class="btn btn-download uppercase text-fs-15 font-medium text-white inline-block rounded-35 relative pl-29 pr-70 leading-lh-51 h-55 border border-accent overflow-hidden">
+                           <span class="relative z-10">view developer CV</span>
+                           <span class="absolute right-0 top-0 bottom-0 w-55 flex items-center justify-center bg-accent text-white"><i class="fa fa-file-pdf-o"></i></span>
+                        </a>
+                     </div>
+                     <div class="xl:basis-5/12 lg:basis-1/2 down-lg:basis-full px-15 down-lg:mt-45">
+                        <h3 class="uppercase text-fs-24 xs:text-fs-21 pb-22 text-white font-semibold">What we build</h3>
+                        <div class="flex flex-wrap -mx-10">
+                           <div class="basis-1/2 xs:basis-full px-10 mb-20">
+                              <div class="border border-black-4 rounded-10 p-20 h-full bg-black-2">
+                                 <i class="fa fa-gamepad text-accent text-fs-24 mb-14"></i>
+                                 <h4 class="text-white text-fs-17 font-medium mb-8">Gameplay systems</h4>
+                                 <p class="text-fs-14 leading-lh-1.6 m-0">Core mechanics, player feedback and game feel.</p>
+                              </div>
+                           </div>
+                           <div class="basis-1/2 xs:basis-full px-10 mb-20">
+                              <div class="border border-black-4 rounded-10 p-20 h-full bg-black-2">
+                                 <i class="fa fa-mobile text-accent text-fs-24 mb-14"></i>
+                                 <h4 class="text-white text-fs-17 font-medium mb-8">Mobile games</h4>
+                                 <p class="text-fs-14 leading-lh-1.6 m-0">Production-minded development for mobile players.</p>
+                              </div>
+                           </div>
+                           <div class="basis-1/2 xs:basis-full px-10 mb-20">
+                              <div class="border border-black-4 rounded-10 p-20 h-full bg-black-2">
+                                 <i class="fa fa-code text-accent text-fs-24 mb-14"></i>
+                                 <h4 class="text-white text-fs-17 font-medium mb-8">Unity &amp; C#</h4>
+                                 <p class="text-fs-14 leading-lh-1.6 m-0">Scalable architecture and clean implementation.</p>
+                              </div>
+                           </div>
+                           <div class="basis-1/2 xs:basis-full px-10 mb-20">
+                              <div class="border border-black-4 rounded-10 p-20 h-full bg-black-2">
+                                 <i class="fa fa-puzzle-piece text-accent text-fs-24 mb-14"></i>
+                                 <h4 class="text-white text-fs-17 font-medium mb-8">Integrations</h4>
+                                 <p class="text-fs-14 leading-lh-1.6 m-0">Systems and services connected without friction.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="border-t border-black-4 mt-45 pt-35 pb-15">
+                     <p class="uppercase text-accent font-semibold mb-10">Founder-led development</p>
+                     <p class="text-fs-16 leading-lh-1.8 max-w-700 m-0">Each project stays close to its technical and creative intent: from the first playable idea through implementation, iteration and integration with the wider team.</p>
+                  </div>
+               </div>
+               <div class="hidden">
+                  <div class="flex flex-row down-lg:flex-col">
+                    <!-- Personal Informations Starts -->
+                     <div class="xl:basis-1/2 lg:basis-5/12 down-lg:basis-full">
+                        <h3 class="uppercase text-fs-26 xs:text-fs-21 pb-22 text-white font-semibold">
+                           personal infos
+                        </h3>
+                        <img class="hidden xs:block rounded-full border-4 border-solid border-black-3 w-230 h-230 mb-25 mx-auto" src="https://via.placeholder.com/300x300" alt="">
+                        <div class="flex justify-between xs:justify-start font-Open-sans capitalize">
+                           <div class="basis-1/2 [&>div]:pb-20 [&>div:last-child]:pb-0 text-fs-15 xs:text-fs-14">
+                              <div>
+                                 <span class="opacity-80">
+                                 first name :
+                                 </span>
+                                 <span class="xs:block custom-md-2:block font-semibold">
+                                 steve
+                                 </span>
+                              </div>
+                              <div>
+                                 <span class="opacity-80">
+                                 last name :
+                                 </span>
+                                 <span class="xs:block custom-md-2:block font-semibold">
+                                 milner
+                                 </span>
+                              </div>
+                              <div>
+                                 <span class="opacity-80">
+                                 age :
+                                 </span>
+                                 <span class="xs:block custom-md-2:block font-semibold">
+                                 27 years
+                                 </span>
+                              </div>
+                              <div>
+                                 <span class="opacity-80">
+                                 nationality :
+                                 </span>
+                                 <span class="xs:block custom-md-2:block font-semibold">
+                                 tunisian
+                                 </span>
+                              </div>
+                              <div>
+                                 <span class="opacity-80">
+                                 freelance :
+                                 </span>
+                                 <span class="xs:block custom-md-2:block font-semibold">
+                                 available
+                                 </span>
+                              </div>
+                           </div>
+                           <div class="basis-1/2 [&>div]:pb-20 [&>div:last-child]:pb-0 text-fs-15 xs:text-fs-14">
+                              <div>
+                                 <span class="opacity-80">
+                                 address :
+                                 </span>
+                                 <span class="xs:block custom-md-2:block font-semibold">
+                                 tunis
+                                 </span>
+                              </div>
+                              <div>
+                                 <span class="opacity-80">
+                                 phone :
+                                 </span>
+                                 <span class="xs:block custom-md-2:block font-semibold">
+                                 +216 21 184 010
+                                 </span>
+                              </div>
+                              <div>
+                                 <span class="opacity-80">
+                                 email :
+                                 </span>
+                                 <span class="xs:block custom-md-2:block font-semibold">
+                                 you@mail.com
+                                 </span>
+                              </div>
+                              <div>
+                                 <span class="opacity-80">
+                                 skype :
+                                 </span>
+                                 <span class="xs:block custom-md-2:block font-semibold">
+                                 Steve.milner
+                                 </span>
+                              </div>
+                              <div>
+                                 <span class="opacity-80">
+                                 langages :
+                                 </span>
+                                 <span class="xs:block custom-md-2:block font-semibold">
+                                 french, english
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                        <a class="button mt-30 overflow-hidden inline-block leading-lh-1.4 rounded-30 text-ellipsis text-center align-middle select-none transition-all duration-250 ease-in-out uppercase no-underline relative z-10 py-16 pr-70 pl-35 text-fs-15 font-semibold text-white bg-transparent outline-0 before:absolute before:-z-10 before:left-0 before:right-0 before:top-0 before:bottom-0 before:translate-x-full hover:before:translate-x-0 before:transition before:duration-300 before:ease-out" href="about.html">
+                        <span class="relative z-20 text-white">download cv</span>
+                        <span class="absolute -right-px bottom-0 w-55 h-55 flex items-center justify-center rounded-full text-white text-fs-19 fa fa-download bg-accent"></span>
+                        </a>
+                     </div>
+                     <!-- Personal Informations Ends -->
+                     <!-- Facts Starts -->
+                     <div class="xl:basis-1/2 lg:basis-7/12 down-lg:basis-full down-lg:mt-50">
+                        <div class="flex down-lg:-mx-15 flex-wrap">
+                           <div class="w-1/2 px-15">
+                              <div class="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-20 pl-40 xs:pl-25 border border-black-3 rounded-5 mb-30 xs:mb-25">
+                                 <h3 class="relative inline-block font-bold text-fs-50 xs:text-fs-40 text-accent leading-lh-1.2 after:content-['+'] after:absolute after:-right-24 after:text-fs-33 after:font-light after:top-2">
+                                    12
+                                 </h3>
+                                 <p class="relative xs:text-fs-14 uppercase pl-45 xs:pl-0 xs:before:hidden font-Open-sans font-medium before:absolute before:left-0 before:top-13 before:w-30 before:h-1 before:bg-black-5">
+                                    years of <span class="block">experience</span>
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="w-1/2 px-15">
+                              <div class="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-20 pl-40 xs:pl-25 border border-black-3 rounded-5 mb-30 xs:mb-25">
+                                 <h3 class="relative inline-block font-bold text-fs-50 xs:text-fs-40 text-accent leading-lh-1.2 after:content-['+'] after:absolute after:-right-24 after:text-fs-33 after:font-light after:top-2">
+                                    97
+                                 </h3>
+                                 <p class="relative xs:text-fs-14 uppercase pl-45 xs:pl-0 xs:before:hidden font-Open-sans font-medium before:absolute before:left-0 before:top-13 before:w-30 before:h-1 before:bg-black-5">
+                                    completed <span class="block">projects</span>
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="w-1/2 px-15">
+                              <div class="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-20 pl-40 xs:pl-25 border border-black-3 rounded-5">
+                                 <h3 class="relative inline-block font-bold text-fs-50 xs:text-fs-40 text-accent leading-lh-1.2 after:content-['+'] after:absolute after:-right-24 after:text-fs-33 after:font-light after:top-2">
+                                    81
+                                 </h3>
+                                 <p class="relative xs:text-fs-14 uppercase pl-45 xs:pl-0 xs:before:hidden font-Open-sans font-medium before:absolute before:left-0 before:top-13 before:w-30 before:h-1 before:bg-black-5">
+                                    happy <span class="block">customers</span>
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="w-1/2 px-15">
+                              <div class="pt-20 xs:pt-15 pr-30 xs:pr-20 pb-25 xs:pb-20 pl-40 xs:pl-25 border border-black-3 rounded-5">
+                                 <h3 class="relative inline-block font-bold text-fs-50 xs:text-fs-40 text-accent leading-lh-1.2 after:content-['+'] after:absolute after:-right-24 after:text-fs-33 after:font-light after:top-2">
+                                    53
+                                 </h3>
+                                 <p class="relative xs:text-fs-14 uppercase pl-45 xs:pl-0 xs:before:hidden font-Open-sans font-medium before:absolute before:left-0 before:top-13 before:w-30 before:h-1 before:bg-black-5">
+                                    awards <span class="block">won</span>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Facts Ends -->
+                  </div>
+                  <hr class="border-t border-solid border-t-black-3 mx-auto max-w-40prcent mt-70 mb-55">
+                  <h3 class="uppercase text-fs-26 xs:text-fs-21 pb-48 text-white font-semibold text-center">
+                     my skills
+                  </h3>
+                  <!-- Skills Starts -->
+                  <div class="flex w-full flex-wrap">
+                     <div class="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+                        <div class="c100 p25 float-none mx-auto bg-black-3">
+                           <span>25%</span>
+                           <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                           </div>
+                        </div>
+                        <h6 class="uppercase font-Open-sans text-center mt-24 xs:mt-8">html</h6>
+                     </div>
+                     <div class="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+                        <div class="c100 p89 float-none mx-auto bg-black-3">
+                           <span>89%</span>
+                           <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                           </div>
+                        </div>
+                        <h6 class="uppercase font-Open-sans text-center mt-24 xs:mt-8">javascript</h6>
+                     </div>
+                     <div class="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+                        <div class="c100 p70 float-none mx-auto bg-black-3">
+                           <span>70%</span>
+                           <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                           </div>
+                        </div>
+                        <h6 class="uppercase font-Open-sans text-center mt-24 xs:mt-8">css</h6>
+                     </div>
+                     <div class="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+                        <div class="c100 p66 float-none mx-auto bg-black-3">
+                           <span>66%</span>
+                           <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                           </div>
+                        </div>
+                        <h6 class="uppercase font-Open-sans text-center mt-24 xs:mt-8">php</h6>
+                     </div>
+                     <div class="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+                        <div class="c100 p95 float-none mx-auto bg-black-3">
+                           <span>95%</span>
+                           <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                           </div>
+                        </div>
+                        <h6 class="uppercase font-Open-sans text-center mt-24 xs:mt-8">wordpress</h6>
+                     </div>
+                     <div class="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+                        <div class="c100 p50 float-none mx-auto bg-black-3">
+                           <span>50%</span>
+                           <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                           </div>
+                        </div>
+                        <h6 class="uppercase font-Open-sans text-center mt-24 xs:mt-8">jquery</h6>
+                     </div>
+                     <div class="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+                        <div class="c100 p65 float-none mx-auto bg-black-3">
+                           <span>65%</span>
+                           <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                           </div>
+                        </div>
+                        <h6 class="uppercase font-Open-sans text-center mt-24 xs:mt-8">angular</h6>
+                     </div>
+                     <div class="w-1/4 mb-48 down-sm:w-1/2 xs:mb-16">
+                        <div class="c100 p45 float-none mx-auto bg-black-3">
+                           <span>45%</span>
+                           <div class="slice">
+                              <div class="bar"></div>
+                              <div class="fill"></div>
+                           </div>
+                        </div>
+                        <h6 class="uppercase font-Open-sans text-center mt-24 xs:mt-8">react</h6>
+                     </div>
+                  </div>
+                  <!-- Skills Ends -->
+                  <hr class="border-t border-solid border-t-black-3 mx-auto max-w-40prcent mt-35 mb-55">
+                  <h3 class="uppercase text-fs-26 xs:text-fs-21 pb-48 text-white font-semibold text-center">
+                     experience & education
+                  </h3>
+                  <!-- Resume Starts -->
+                  <div class="flex down-sm:flex-col from-sm:mb-40">
+                    <!-- Experience Starts -->
+                     <div class="w-1/2 down-sm:w-full">
+                        <ul>
+                           <li class="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
+                              <div class="bg-accent w-40 h-40 absolute left-0 leading-lh-40 text-center z-10 rounded-full text-white">
+                                 <i class="fa fa-briefcase"></i>
+                              </div>
+                              <span class="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
+                              2018 - Present
+                              </span>
+                              <h5 class="uppercase text-fs-18 mt-7 mb-10">
+                                 web developer
+                                 <span class="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
+                                 envato
+                                 </span>
+                              </h5>
+                              <p class="font-Open-sans text-light-grey text-fs-14">
+                                 Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit, 
+                              </p>
+                           </li>
+                           <li class="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
+                              <div class="bg-accent w-40 h-40 absolute left-0 leading-lh-40 text-center z-10 rounded-full text-white">
+                                 <i class="fa fa-briefcase"></i>
+                              </div>
+                              <span class="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
+                              2013 - 2018
+                              </span>
+                              <h5 class="uppercase text-fs-18 mt-7 mb-10">
+                                 UI/UX Designer
+                                 <span class="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
+                                 Themeforest
+                                 </span>
+                              </h5>
+                              <p class="font-Open-sans text-light-grey text-fs-14">
+                                 Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit, 
+                              </p>
+                           </li>
+                           <li class="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
+                              <div class="bg-accent w-40 h-40 absolute left-0 leading-lh-40 text-center z-10 rounded-full text-white">
+                                 <i class="fa fa-briefcase"></i>
+                              </div>
+                              <span class="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
+                              2005 - 2013
+                              </span>
+                              <h5 class="uppercase text-fs-18 mt-7 mb-10">
+                                 consultant
+                                 <span class="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
+                                 Videohive
+                                 </span>
+                              </h5>
+                              <p class="font-Open-sans text-light-grey text-fs-14">
+                                 Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit, 
+                              </p>
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- Experience Ends -->
+                     <!-- Education Starts -->
+                     <div class="w-1/2 down-sm:w-full">
+                        <ul>
+                           <li class="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
+                              <div class="bg-accent w-40 h-40 absolute left-0 leading-lh-40 text-center z-10 rounded-full text-white">
+                                 <i class="fa fa-graduation-cap"></i>
+                              </div>
+                              <span class="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
+                              2015
+                              </span>
+                              <h5 class="uppercase text-fs-18 mt-7 mb-10">
+                                 Engineer Degree
+                                 <span class="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
+                                 Oxford University
+                                 </span>
+                              </h5>
+                              <p class="font-Open-sans text-light-grey text-fs-14">
+                                 Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit, 
+                              </p>
+                           </li>
+                           <li class="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
+                              <div class="bg-accent w-40 h-40 absolute left-0 leading-lh-40 text-center z-10 rounded-full text-white">
+                                 <i class="fa fa-graduation-cap"></i>
+                              </div>
+                              <span class="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
+                              2012
+                              </span>
+                              <h5 class="uppercase text-fs-18 mt-7 mb-10">
+                                 Master Degree
+                                 <span class="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
+                                 Kiev University
+                                 </span>
+                              </h5>
+                              <p class="font-Open-sans text-light-grey text-fs-14">
+                                 Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit, 
+                              </p>
+                           </li>
+                           <li class="relative pr-20 pl-60 mb-50 after:absolute after:top-0 after:left-20 after:bg-black-4 after:w-1 after:h-full">
+                              <div class="bg-accent w-40 h-40 absolute left-0 leading-lh-40 text-center z-10 rounded-full text-white">
+                                 <i class="fa fa-graduation-cap"></i>
+                              </div>
+                              <span class="text-white text-fs-12 py-1 px-10 inline-block mb-12 rounded-20 font-semibold bg-black-3 opacity-80 font-Open-sans uppercase">
+                              2009
+                              </span>
+                              <h5 class="uppercase text-fs-18 mt-7 mb-10">
+                                 Bachelor Degree
+                                 <span class="opacity-80 font-semibold text-fs-15 relative pl-26 font-Open-sans before:absolute before:w-10 before:h-2 before:bg-white before:left-7 before:top-9 before:opacity-80">
+                                 Tunis High School
+                                 </span>
+                              </h5>
+                              <p class="font-Open-sans text-light-grey text-fs-14">
+                                 Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit, 
+                              </p>
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- Education Ends -->
+                  </div>
+                  <!-- Resume Ends -->
+               </div>
+               </div>
+            </div>
+         </div>
+         <!-- About Ends -->
+         <!-- Games Starts -->
+         <div class="page" id="games">
+            <div class="w-full py-80 xs:pt-80 xs:pb-30">
+               <div class="xl:max-w-1140 custom-md-3:max-w-[calc(100%-195px)] lg:max-w-960 md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto px-15 xs:px-25">
+                  <div class="text-center mb-45">
+                     <p class="uppercase tracking-10 text-fs-13 text-accent mb-16">Selected work</p>
+                     <h2 class="text-fs-56 font-black font-Poppins uppercase text-white m-0 down-md:text-fs-42 xs:text-fs-29">Games</h2>
+                     <p class="font-Open-sans mt-20 text-fs-16 leading-lh-30 text-black-7 max-w-700 mx-auto">A growing collection of game projects and contributions across mobile, strategy and arcade experiences.</p>
+                  </div>
+                  <div class="flex flex-wrap -mx-15">
+                     <div class="lg:basis-1/3 down-lg:basis-1/2 xs:basis-full px-15 mb-30">
+                        <article class="h-full bg-black-2 border border-black-4 rounded-10 overflow-hidden">
+                           <img class="block w-full" src="assets/img/games/rocket-evolution.png" alt="Rocket Evolution game artwork">
+                           <div class="p-20">
+                              <p class="uppercase text-accent text-fs-12 font-semibold mb-8">Game project</p>
+                              <h3 class="text-white text-fs-21 font-semibold m-0">Rocket Evolution</h3>
+                           </div>
+                        </article>
+                     </div>
+                     <div class="lg:basis-1/3 down-lg:basis-1/2 xs:basis-full px-15 mb-30">
+                        <article class="h-full bg-black-2 border border-black-4 rounded-10 overflow-hidden">
+                           <img class="block w-full" src="assets/img/games/slimes-kingdom.png" alt="Slimes Kingdom game artwork">
+                           <div class="p-20">
+                              <p class="uppercase text-accent text-fs-12 font-semibold mb-8">Game project</p>
+                              <h3 class="text-white text-fs-21 font-semibold m-0">Slimes Kingdom</h3>
+                           </div>
+                        </article>
+                     </div>
+                     <div class="lg:basis-1/3 down-lg:basis-full xs:basis-full px-15 mb-30">
+                        <article class="h-full bg-black-2 border border-black-4 rounded-10 overflow-hidden">
+                           <img class="block w-full" src="assets/img/games/tunnel-racing.png" alt="Tunnel Racing game artwork">
+                           <div class="p-20">
+                              <p class="uppercase text-accent text-fs-12 font-semibold mb-8">Game project</p>
+                              <h3 class="text-white text-fs-21 font-semibold m-0">Tunnel Racing</h3>
+                           </div>
+                        </article>
+                     </div>
+                  </div>
+                  <p class="text-center text-black-7 text-fs-14 leading-lh-26 mt-10 mb-0">More case studies, roles and playable links will be added as each project is cleared for publication.</p>
+               </div>
+            </div>
+         </div>
+         <!-- Games Ends -->
+         <!-- Portfolio Starts -->
+         <div class="page" id="portfolio">
+            <div class="w-full">
+              <!-- Section Title Starts -->
+               <div class="mx-auto w-full relative py-80 text-center xs:px-25 xs:pt-16 xs:pb-14 xs:bg-black-3 xs:border-b xs:border-black-4 xs:fixed xs:left-0 xs:right-0 xs:top-0 xs:z-20">
+                  <h2 class="text-fs-56 font-black font-Poppins uppercase text-white m-0 xs:text-fs-26 xs:text-left xs:leading-lh-1.2">
+                     project <span class="text-accent">portfolio</span>
+                  </h2>
+                  <span class="text-fs-110 absolute left-0 right-0 top-1/2 tracking-10 leading-lh-0.7 font-extrabold text-muted -translate-y-1/2 uppercase xs:hidden">projects</span>
+               </div>
+               <!-- Section Title Ends -->
+               <!-- Portfolio Items Starts -->
+               <div class="xl:max-w-1140 custom-md-3:max-w-[calc(100%-195px)] lg:max-w-960 md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto px-15 xs:px-25 pb-60 xs:pt-80 xs:pb-30">
+                  <p class="text-center text-fs-16 leading-lh-30 text-black-7 max-w-700 mx-auto mb-40">The portfolio is organized by the context of each engagement. Case-study details and external links will be added only after the project role and publication status are confirmed.</p>
+                  <div class="flex flex-wrap -mx-15 mb-35">
+                     <div class="lg:basis-1/3 down-lg:basis-1/2 xs:basis-full px-15 mb-20">
+                        <div class="h-full bg-black-2 border border-black-4 rounded-10 p-25">
+                           <i class="fa fa-rocket text-accent text-fs-21 mb-14"></i>
+                           <h3 class="text-white text-fs-18 font-semibold mb-10">Independent projects</h3>
+                           <p class="text-fs-14 leading-lh-1.6 m-0">Original experiments and game ideas developed outside client engagements.</p>
+                        </div>
+                     </div>
+                     <div class="lg:basis-1/3 down-lg:basis-1/2 xs:basis-full px-15 mb-20">
+                        <div class="h-full bg-black-2 border border-black-4 rounded-10 p-25">
+                           <i class="fa fa-users text-accent text-fs-21 mb-14"></i>
+                           <h3 class="text-white text-fs-18 font-semibold mb-10">Commercial projects</h3>
+                           <p class="text-fs-14 leading-lh-1.6 m-0">Team contributions and production work that are cleared for a public showcase.</p>
+                        </div>
+                     </div>
+                     <div class="lg:basis-1/3 down-lg:basis-full xs:basis-full px-15 mb-20">
+                        <div class="h-full bg-black-2 border border-black-4 rounded-10 p-25">
+                           <i class="fa fa-flask text-accent text-fs-21 mb-14"></i>
+                           <h3 class="text-white text-fs-18 font-semibold mb-10">Test assignments</h3>
+                           <p class="text-fs-14 leading-lh-1.6 m-0">Focused technical exercises that show problem-solving and implementation choices.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <h3 class="uppercase text-fs-21 text-white font-semibold mb-20">Selected visuals</h3>
+                  <div class="flex flex-wrap -mx-15">
+                     <div class="lg:basis-1/3 down-lg:basis-1/2 xs:basis-full px-15 mb-30"><figure class="bg-black-2 border border-black-4 rounded-10 overflow-hidden h-full"><img class="block w-full" src="assets/img/portfolio/beach-ball.jpg" alt="Beach Ball project artwork"><figcaption class="p-18 text-white text-fs-16 font-medium">Beach Ball</figcaption></figure></div>
+                     <div class="lg:basis-1/3 down-lg:basis-1/2 xs:basis-full px-15 mb-30"><figure class="bg-black-2 border border-black-4 rounded-10 overflow-hidden h-full"><img class="block w-full" src="assets/img/portfolio/castle-clash.jpg" alt="Castle Clash project artwork"><figcaption class="p-18 text-white text-fs-16 font-medium">Castle Clash: Tower Defense</figcaption></figure></div>
+                     <div class="lg:basis-1/3 down-lg:basis-1/2 xs:basis-full px-15 mb-30"><figure class="bg-black-2 border border-black-4 rounded-10 overflow-hidden h-full"><img class="block w-full" src="assets/img/portfolio/fighter-machines.jpg" alt="Fighter Machines project artwork"><figcaption class="p-18 text-white text-fs-16 font-medium">Fighter Machines</figcaption></figure></div>
+                     <div class="lg:basis-1/3 down-lg:basis-1/2 xs:basis-full px-15 mb-30"><figure class="bg-black-2 border border-black-4 rounded-10 overflow-hidden h-full"><img class="block w-full" src="assets/img/portfolio/flappy-virus.png" alt="Flappy Virus project artwork"><figcaption class="p-18 text-white text-fs-16 font-medium">Flappy Virus</figcaption></figure></div>
+                     <div class="lg:basis-1/3 down-lg:basis-1/2 xs:basis-full px-15 mb-30"><figure class="bg-black-2 border border-black-4 rounded-10 overflow-hidden h-full"><img class="block w-full" src="assets/img/portfolio/pikamoon.png" alt="Pikamoon project artwork"><figcaption class="p-18 text-white text-fs-16 font-medium">Pikamoon</figcaption></figure></div>
+                     <div class="lg:basis-1/3 down-lg:basis-1/2 xs:basis-full px-15 mb-30"><figure class="bg-black-2 border border-black-4 rounded-10 overflow-hidden h-full"><img class="block w-full" src="assets/img/portfolio/water-sort-puzzle.png" alt="Water Sort Puzzle project artwork"><figcaption class="p-18 text-white text-fs-16 font-medium">Water Sort Puzzle: Color Tubes</figcaption></figure></div>
+                  </div>
+               </div>
+               <div class="hidden">
+               <div class="-mt-15 pb-60 xs:pb-20 portfolio">
+                  <div id="grid-gallery" class="xl:max-w-1140 custom-md-3:max-w-[calc(100%-195px)] md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto">
+                      <!-- Portfolio Grid Starts -->
+                     <div class="grid-wrap mx-auto mb-25">
+                        <ul class="gridlist">
+                          <!-- Portfolio Grid Item Starts -->
+                           <li class="w-1/3 down-lg:w-1/2 xs:w-full float-left cursor-pointer p-15 xs:px-0">
+                              <figure class="transition duration-300 rounded-5 relative overflow-hidden">
+                                 <img class="block relative w-full rounded-5 transition duration-300" src="https://via.placeholder.com/895x552" alt="">
+                                 <div class="absolute w-full h-full flex items-center justify-center bg-accent">
+                                    <span class="uppercase text-fs-18 text-white">
+                                    image project
+                                    </span>
+                                 </div>
+                              </figure>
+                           </li>
+                           <!-- Portfolio Grid Item Ends -->
+                           <!-- Portfolio Grid Item Starts -->
+                           <li class="w-1/3 down-lg:w-1/2 xs:w-full float-left cursor-pointer p-15 xs:px-0">
+                              <figure class="transition duration-300 rounded-5 relative overflow-hidden">
+                                 <img class="block relative w-full rounded-5 transition duration-300" src="https://via.placeholder.com/895x552" alt="">
+                                 <div class="absolute w-full h-full flex items-center justify-center bg-accent">
+                                    <span class="uppercase text-fs-18 tex-white">
+                                    youtube project
+                                    </span>
+                                 </div>
+                              </figure>
+                           </li>
+                           <!-- Portfolio Grid Item Ends -->
+                           <!-- Portfolio Grid Item Starts -->
+                           <li class="w-1/3 down-lg:w-1/2 xs:w-full float-left cursor-pointer p-15 xs:px-0">
+                              <figure class="transition duration-300 rounded-5 relative overflow-hidden">
+                                 <img class="block relative w-full rounded-5 transition duration-300" src="https://via.placeholder.com/895x552" alt="">
+                                 <div class="absolute w-full h-full flex items-center justify-center bg-accent">
+                                    <span class="uppercase text-fs-18 tex-white">
+                                    Local Video project
+                                    </span>
+                                 </div>
+                              </figure>
+                           </li>
+                           <!-- Portfolio Grid Item Ends -->
+                           <!-- Portfolio Grid Item Starts -->
+                           <li class="w-1/3 down-lg:w-1/2 xs:w-full float-left cursor-pointer p-15 xs:px-0">
+                              <figure class="transition duration-300 rounded-5 relative overflow-hidden">
+                                 <img class="block relative w-full rounded-5 transition duration-300" src="https://via.placeholder.com/895x552" alt="">
+                                 <div class="absolute w-full h-full flex items-center justify-center bg-accent">
+                                    <span class="uppercase text-fs-18 tex-white">
+                                    Image Project
+                                    </span>
+                                 </div>
+                              </figure>
+                           </li>
+                           <!-- Portfolio Grid Item Ends -->
+                           <!-- Portfolio Grid Item Starts -->
+                           <li class="w-1/3 down-lg:w-1/2 xs:w-full float-left cursor-pointer p-15 xs:px-0">
+                              <figure class="transition duration-300 rounded-5 relative overflow-hidden">
+                                 <img class="block relative w-full rounded-5 transition duration-300" src="https://via.placeholder.com/895x552" alt="">
+                                 <div class="absolute w-full h-full flex items-center justify-center bg-accent">
+                                    <span class="uppercase text-fs-18 tex-white">
+                                    image project
+                                    </span>
+                                 </div>
+                              </figure>
+                           </li>
+                           <!-- Portfolio Grid Item Ends -->
+                           <!-- Portfolio Grid Item Starts -->
+                           <li class="w-1/3 down-lg:w-1/2 xs:w-full float-left cursor-pointer p-15 xs:px-0">
+                              <figure class="transition duration-300 rounded-5 relative overflow-hidden">
+                                 <img class="block relative w-full rounded-5 transition duration-300" src="https://via.placeholder.com/895x552" alt="">
+                                 <div class="absolute w-full h-full flex items-center justify-center bg-accent">
+                                    <span class="uppercase text-fs-18 tex-white">
+                                    image project
+                                    </span>
+                                 </div>
+                              </figure>
+                           </li>
+                           <!-- Portfolio Grid Item Ends -->
+                           <!-- Portfolio Grid Item Starts -->
+                           <li class="w-1/3 down-lg:w-1/2 xs:w-full float-left cursor-pointer p-15 xs:px-0">
+                              <figure class="transition duration-300 rounded-5 relative overflow-hidden">
+                                 <img class="block relative w-full rounded-5 transition duration-300" src="https://via.placeholder.com/895x552" alt="">
+                                 <div class="absolute w-full h-full flex items-center justify-center bg-accent">
+                                    <span class="uppercase text-fs-18 tex-white">
+                                    image project
+                                    </span>
+                                 </div>
+                              </figure>
+                           </li>
+                           <!-- Portfolio Grid Item Ends -->
+                           <!-- Portfolio Grid Item Starts -->
+                           <li class="w-1/3 down-lg:w-1/2 xs:w-full float-left cursor-pointer p-15 xs:px-0">
+                              <figure class="transition duration-300 rounded-5 relative overflow-hidden">
+                                 <img class="block relative w-full rounded-5 transition duration-300" src="https://via.placeholder.com/895x552" alt="">
+                                 <div class="absolute w-full h-full flex items-center justify-center bg-accent">
+                                    <span class="uppercase text-fs-18 tex-white">
+                                    image project
+                                    </span>
+                                 </div>
+                              </figure>
+                           </li>
+                           <!-- Portfolio Grid Item Ends -->
+                           <!-- Portfolio Grid Item Starts -->
+                           <li class="w-1/3 down-lg:w-1/2 xs:w-full float-left cursor-pointer p-15 xs:px-0">
+                              <figure class="transition duration-300 rounded-5 relative overflow-hidden">
+                                 <img class="block relative w-full rounded-5 transition duration-300" src="https://via.placeholder.com/895x552" alt="">
+                                 <div class="absolute w-full h-full flex items-center justify-center bg-accent">
+                                    <span class="uppercase text-fs-18 tex-white">
+                                    image project
+                                    </span>
+                                 </div>
+                              </figure>
+                           </li>
+                           <!-- Portfolio Grid Item Ends -->
+                        </ul>
+                     </div>
+                     <!-- Portfolio Grid Ends -->
+                     <!-- Portfolio Details Starts -->
+                     <div class="slideshow">
+                        <ul>
+                           <!-- Portfolio Item Detail Starts -->
+                           <li class="w-660 absolute left-1/2 top-1/2 -mt-280 -ml-330 invisible">
+                              <figure class="w-full h-full bg-black-3 p-30 overflow-auto rounded-10">
+                                 <!-- Project Details Starts -->
+                                 <figcaption class="mb-15">
+                                    <h3 class="uppercase leading-lh-1.2 text-accent pt-10 pb-28 font-bold text-center text-fs-33">Image Project</h3>
+                                    <div class="flex flex-wrap font-Open-sans text-fs-15">
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-file-text-o pr-8"></i><span class="project-label">Project </span>: <span class="font-semibold">Website</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-user-o pr-8"></i><span class="project-label">Client </span>: <span class="font-semibold">Envato</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-code pr-8"></i><span class="project-label">Langages </span>: <span class="font-semibold">HTML, CSS, Javascript</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-external-link pr-8"></i><span class="project-label">Preview </span>: <span class="font-semibold"><a class="underline text-accent" href="#" target="_blank">www.envato.com</a></span>
+                                       </div>
+                                    </div>
+                                 </figcaption>
+                                 <!-- Project Details Ends -->
+                                 <!-- Main Project Content Starts -->
+                                 <img class="block w-full rounded-5" src="https://via.placeholder.com/895x552" alt="Portolio Image">
+                                 <!-- Main Project Content Ends -->
+                              </figure>
+                           </li>
+                           <!-- Portfolio Item Detail Ends -->
+                           <!-- Portfolio Item Detail Starts -->
+                           <li class="w-660 absolute left-1/2 top-1/2 -mt-280 -ml-330 invisible">
+                              <figure class="w-full h-full bg-black-3 p-30 overflow-auto rounded-10">
+                                 <!-- Project Details Starts -->
+                                 <figcaption class="mb-15">
+                                    <h3 class="uppercase leading-lh-1.2 text-accent pt-10 pb-28 font-bold text-center text-fs-33">Youtube Project</h3>
+                                    <div class="flex flex-wrap font-Open-sans text-fs-15">
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-file-text-o pr-8"></i><span class="project-label">Project </span>: <span class="font-semibold">Website</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-user-o pr-8"></i><span class="project-label">Client </span>: <span class="font-semibold">Envato</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-code pr-8"></i><span class="project-label">Langages </span>: <span class="font-semibold">HTML, CSS, Javascript</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-external-link pr-8"></i><span class="project-label">Preview </span>: <span class="font-semibold"><a class="underline text-accent" href="#" target="_blank">www.envato.com</a></span>
+                                       </div>
+                                    </div>
+                                 </figcaption>
+                                 <!-- Project Details Ends -->
+                                 <!-- Main Project Content Starts -->
+                                 <div class="videocontainer">
+                                    <iframe class="youtube-video" src="https://www.youtube.com/embed/7e90gBu4pas?enablejsapi=1&version=3&playerapiid=ytplayer" allowfullscreen></iframe>
+                                 </div>
+                                 <!-- Main Project Content Ends -->
+                              </figure>
+                           </li>
+                           <!-- Portfolio Item Detail Ends -->
+                           <!-- Portfolio Item Detail Starts -->
+                           <li class="w-660 absolute left-1/2 top-1/2 -mt-280 -ml-330 invisible">
+                              <figure class="w-full h-full bg-black-3 p-30 overflow-auto rounded-10">
+                                 <!-- Project Details Starts -->
+                                 <figcaption class="mb-15">
+                                    <h3 class="uppercase leading-lh-1.2 text-accent pt-10 pb-28 font-bold text-center text-fs-33">Local Video Project</h3>
+                                    <div class="flex flex-wrap font-Open-sans text-fs-15">
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-file-text-o pr-8"></i><span class="project-label">Project </span>: <span class="font-semibold">Video</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-user-o pr-8"></i><span class="project-label">Client </span>: <span class="font-semibold">Videohive</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-code pr-8"></i><span class="project-label">Langages </span>: <span class="font-semibold">Adobe After Effects</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-external-link pr-8"></i><span class="project-label">Preview </span>: <span class="font-semibold"><a class="underline text-accent" href="#" target="_blank">www.videhive.net</a></span>
+                                       </div>
+                                    </div>
+                                 </figcaption>
+                                 <!-- Project Details Ends -->
+                                 <!-- Main Project Content Starts -->
+                                 <video id="video" class="responsive-video" controls poster="https://via.placeholder.com/895x552">
+                                    <source src="path_to_your_video.mp4" type="video/mp4">
+                                 </video>
+                                 <!-- Main Project Content Ends -->
+                              </figure>
+                           </li>
+                           <!-- Portfolio Item Detail Ends -->
+                           <!-- Portfolio Item Detail Starts -->
+                           <li class="w-660 absolute left-1/2 top-1/2 -mt-280 -ml-330 invisible">
+                              <figure class="w-full h-full bg-black-3 p-30 overflow-auto rounded-10">
+                                 <!-- Project Details Starts -->
+                                 <figcaption class="mb-15">
+                                    <h3 class="uppercase leading-lh-1.2 text-accent pt-10 pb-28 font-bold text-center text-fs-33">Image Project</h3>
+                                    <div class="flex flex-wrap font-Open-sans text-fs-15">
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-file-text-o pr-8"></i><span class="project-label">Project </span>: <span class="font-semibold">Video</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-user-o pr-8"></i><span class="project-label">Client </span>: <span class="font-semibold">Videohive</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-code pr-8"></i><span class="project-label">Langages </span>: <span class="font-semibold">Adobe Premium</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-external-link pr-8"></i><span class="project-label">Preview </span>: <span class="font-semibold"><a class="underline text-accent" href="#" target="_blank">www.videhive.net</a></span>
+                                       </div>
+                                    </div>
+                                 </figcaption>
+                                 <!-- Project Details Ends -->
+                                 <!-- Main Project Content Starts -->
+                                 <img class="block w-full rounded-5" src="https://via.placeholder.com/895x552" alt="Portolio Image">
+                                 <!-- Main Project Content Ends -->
+                              </figure>
+                           </li>
+                           <!-- Portfolio Item Detail Ends -->
+                           <!-- Portfolio Item Detail Starts -->
+                           <li class="w-660 absolute left-1/2 top-1/2 -mt-280 -ml-330 invisible">
+                              <figure class="w-full h-full bg-black-3 p-30 overflow-auto rounded-10">
+                                 <!-- Project Details Starts -->
+                                 <figcaption class="mb-15">
+                                    <h3 class="uppercase leading-lh-1.2 text-accent pt-10 pb-28 font-bold text-center text-fs-33">Image Project</h3>
+                                    <div class="flex flex-wrap font-Open-sans text-fs-15">
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-file-text-o pr-8"></i><span class="project-label">Project </span>: <span class="font-semibold">Website</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-user-o pr-8"></i><span class="project-label">Client </span>: <span class="font-semibold">Envato</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-code pr-8"></i><span class="project-label">Langages </span>: <span class="font-semibold">HTML, CSS, Javascript</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-external-link pr-8"></i><span class="project-label">Preview </span>: <span class="font-semibold"><a class="underline text-accent" href="#" target="_blank">www.envato.com</a></span>
+                                       </div>
+                                    </div>
+                                 </figcaption>
+                                 <!-- Project Details Ends -->
+                                 <!-- Main Project Content Starts -->
+                                 <img class="block w-full rounded-5" src="https://via.placeholder.com/895x552" alt="Portolio Image">
+                                 <!-- Main Project Content Ends -->
+                              </figure>
+                           </li>
+                           <!-- Portfolio Item Detail Ends -->
+                           <!-- Portfolio Item Detail Starts -->
+                           <li class="w-660 absolute left-1/2 top-1/2 -mt-280 -ml-330 invisible">
+                              <figure class="w-full h-full bg-black-3 p-30 overflow-auto rounded-10">
+                                 <!-- Project Details Starts -->
+                                 <figcaption class="mb-15">
+                                    <h3 class="uppercase leading-lh-1.2 text-accent pt-10 pb-28 font-bold text-center text-fs-33">Image Project</h3>
+                                    <div class="flex flex-wrap font-Open-sans text-fs-15">
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-file-text-o pr-8"></i><span class="project-label">Project </span>: <span class="font-semibold">Website</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-user-o pr-8"></i><span class="project-label">Client </span>: <span class="font-semibold">Envato</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-code pr-8"></i><span class="project-label">Langages </span>: <span class="font-semibold">HTML, CSS, Javascript</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-external-link pr-8"></i><span class="project-label">Preview </span>: <span class="font-semibold"><a class="underline text-accent" href="#" target="_blank">www.envato.com</a></span>
+                                       </div>
+                                    </div>
+                                 </figcaption>
+                                 <!-- Project Details Ends -->
+                                 <!-- Main Project Content Starts -->
+                                 <img class="block w-full rounded-5" src="https://via.placeholder.com/895x552" alt="Portolio Image">
+                                 <!-- Main Project Content Ends -->
+                              </figure>
+                           </li>
+                           <!-- Portfolio Item Detail Ends -->
+                           <!-- Portfolio Item Detail Starts -->
+                           <li class="w-660 absolute left-1/2 top-1/2 -mt-280 -ml-330 invisible">
+                              <figure class="w-full h-full bg-black-3 p-30 overflow-auto rounded-10">
+                                 <!-- Project Details Starts -->
+                                 <figcaption class="mb-15">
+                                    <h3 class="uppercase leading-lh-1.2 text-accent pt-10 pb-28 font-bold text-center text-fs-33">Image Project</h3>
+                                    <div class="flex flex-wrap font-Open-sans text-fs-15">
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-file-text-o pr-8"></i><span class="project-label">Project </span>: <span class="font-semibold">Website</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-user-o pr-8"></i><span class="project-label">Client </span>: <span class="font-semibold">Envato</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-code pr-8"></i><span class="project-label">Langages </span>: <span class="font-semibold">HTML, CSS, Javascript</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-external-link pr-8"></i><span class="project-label">Preview </span>: <span class="font-semibold"><a class="underline text-accent" href="#" target="_blank">www.envato.com</a></span>
+                                       </div>
+                                    </div>
+                                 </figcaption>
+                                 <!-- Project Details Ends -->
+                                 <!-- Main Project Content Starts -->
+                                 <img class="block w-full rounded-5" src="https://via.placeholder.com/895x552" alt="Portolio Image">
+                                 <!-- Main Project Content Ends -->
+                              </figure>
+                           </li>
+                           <!-- Portfolio Item Detail Ends -->
+                           <!-- Portfolio Item Detail Starts -->
+                           <li class="w-660 absolute left-1/2 top-1/2 -mt-280 -ml-330 invisible">
+                              <figure class="w-full h-full bg-black-3 p-30 overflow-auto rounded-10">
+                                 <!-- Project Details Starts -->
+                                 <figcaption class="mb-15">
+                                    <h3 class="uppercase leading-lh-1.2 text-accent pt-10 pb-28 font-bold text-center text-fs-33">Image Project</h3>
+                                    <div class="flex flex-wrap font-Open-sans text-fs-15">
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-file-text-o pr-8"></i><span class="project-label">Project </span>: <span class="font-semibold">Website</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-user-o pr-8"></i><span class="project-label">Client </span>: <span class="font-semibold">Envato</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-code pr-8"></i><span class="project-label">Langages </span>: <span class="font-semibold">HTML, CSS, Javascript</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-external-link pr-8"></i><span class="project-label">Preview </span>: <span class="font-semibold"><a class="underline text-accent" href="#" target="_blank">www.envato.com</a></span>
+                                       </div>
+                                    </div>
+                                 </figcaption>
+                                 <!-- Project Details Ends -->
+                                 <!-- Main Project Content Starts -->
+                                 <img class="block w-full rounded-5" src="https://via.placeholder.com/895x552" alt="Portolio Image">
+                                 <!-- Main Project Content Ends -->
+                              </figure>
+                           </li>
+                           <!-- Portfolio Item Detail Ends -->
+                           <!-- Portfolio Item Detail Starts -->
+                           <li class="w-660 absolute left-1/2 top-1/2 -mt-280 -ml-330 invisible">
+                              <figure class="w-full h-full bg-black-3 p-30 overflow-auto rounded-10">
+                                 <!-- Project Details Starts -->
+                                 <figcaption class="mb-15">
+                                    <h3 class="uppercase leading-lh-1.2 text-accent pt-10 pb-28 font-bold text-center text-fs-33">Image Project</h3>
+                                    <div class="flex flex-wrap font-Open-sans text-fs-15">
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-file-text-o pr-8"></i><span class="project-label">Project </span>: <span class="font-semibold">Website</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-user-o pr-8"></i><span class="project-label">Client </span>: <span class="font-semibold">Envato</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-code pr-8"></i><span class="project-label">Langages </span>: <span class="font-semibold">HTML, CSS, Javascript</span>
+                                       </div>
+                                       <div class="w-1/2 xs:w-full mb-8">
+                                          <i class="fa fa-external-link pr-8"></i><span class="project-label">Preview </span>: <span class="font-semibold"><a class="underline text-accent" href="#" target="_blank">www.envato.com</a></span>
+                                       </div>
+                                    </div>
+                                 </figcaption>
+                                 <!-- Project Details Ends -->
+                                 <!-- Main Project Content Starts -->
+                                 <img class="block w-full rounded-5" src="https://via.placeholder.com/895x552" alt="Portolio Image">
+                                 <!-- Main Project Content Ends -->
+                              </figure>
+                           </li>
+                           <!-- Portfolio Item Detail Ends -->
+                        </ul>
+                        <!-- Portfolio Navigation Starts -->
+                        <nav class="down-lg:fixed down-lg:top-0 down-lg:w-full down-lg:h-102 down-lg:bg-black-3 down-lg:z-10 down-lg:border-b down-lg:border-solid down-lg:border-b-black-4 xs:h-62">
+                           <span class="nav-prev fixed cursor-pointer py-200 px-30 top-1/2 down-lg:top-35 from-lg:-translate-y-1/2 from-lg:left-0 down-lg:left-30 xs:w-20 xs:top-21"><img class="block" src="assets/img/projects/navigation/left-arrow.png" alt="previous"></span>
+                           <span class="nav-next fixed cursor-pointer py-200 px-30 top-1/2 down-lg:top-35 from-lg:-translate-y-1/2 from-lg:right-0 down-lg:right-30 xs:w-20 xs:top-21"><img class="block" src="assets/img/projects/navigation/right-arrow.png" alt="next"></span>
+                           <span class="nav-close fixed cursor-pointer from-lg:top-30 down-lg:top-35 from-lg:right-30 down-lg:left-0 down-lg:right-0 down-lg:mx-auto down-lg:block down-lg:w-32 xs:w-20 xs:top-21"><img class="block" src="assets/img/projects/navigation/close-button.png" alt="close"> </span>
+                        </nav>
+                        <!-- Portfolio Navigation Ends -->
+                     </div>
+                     <!-- Portfolio Details Ends -->
+                  </div>
+               </div>
+               </div>
+               <!-- Portfolio Items Ends -->
+            </div>
+         </div>
+         <!-- Portfolio Ends -->
+         <!-- Contact Starts -->
+         <div class="page" id="contact">
+            <div class="w-full">
+              <!-- Section Title Starts -->
+               <div class="mx-auto w-full relative py-80 text-center xs:px-25 xs:pt-16 xs:pb-14 xs:bg-black-3 xs:border-b xs:border-black-4 xs:fixed xs:left-0 xs:right-0 xs:top-0 xs:z-20">
+                  <h2 class="text-fs-56 font-black font-Poppins uppercase text-white m-0 xs:text-fs-26 xs:text-left xs:leading-lh-1.2">
+                     let’s <span class="text-accent">talk</span>
+                  </h2>
+                  <span class="text-fs-110 absolute left-0 right-0 top-1/2 tracking-10 leading-lh-0.7 font-extrabold text-muted -translate-y-1/2 uppercase xs:hidden">contact</span>
+               </div>
+               <!-- Section Title Ends -->
+               <div class="xl:max-w-1140 custom-md-3:max-w-[calc(100%-195px)] lg:max-w-960 md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto px-15 xs:px-25">
+                  <div class="flex flex-wrap -mx-15">
+                     <div class="lg:basis-7/12 down-lg:basis-full px-15">
+                        <p class="uppercase text-accent font-semibold mb-12">New projects &amp; collaboration</p>
+                        <h3 class="text-fs-29 xs:text-fs-26 leading-lh-1.4 text-white font-semibold mb-18">Let’s make the next game feel great to play.</h3>
+                        <p class="text-fs-16 leading-lh-1.8 mb-30">For collaboration, game-development opportunities or a conversation about a project, the most direct current channel is Behance.</p>
+                        <a href="https://www.behance.net/35c70eca" target="_blank" rel="noopener" class="btn btn-download uppercase text-fs-15 font-medium text-white inline-block rounded-35 relative pl-29 pr-70 leading-lh-51 h-55 border border-accent overflow-hidden">
+                           <span class="relative z-10">message on Behance</span>
+                           <span class="absolute right-0 top-0 bottom-0 w-55 flex items-center justify-center bg-accent text-white"><i class="fa fa-behance"></i></span>
+                        </a>
+                     </div>
+                     <div class="lg:basis-5/12 down-lg:basis-full px-15 down-lg:mt-45">
+                        <div class="bg-black-2 border border-black-4 rounded-10 p-25">
+                           <i class="fa fa-paper-plane text-accent text-fs-26 mb-14"></i>
+                           <h3 class="text-white text-fs-21 font-semibold mb-10">A clear contact path</h3>
+                           <p class="text-fs-15 leading-lh-1.7 m-0">A dedicated studio email will be added here before the public launch. Until then, Behance keeps every inquiry attached to the portfolio it refers to.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Contact Ends -->
+         <!-- Privacy Starts -->
+         <div class="page" id="privacy">
+            <div class="w-full py-80 xs:pt-80 xs:pb-30">
+               <div class="xl:max-w-1140 custom-md-3:max-w-[calc(100%-195px)] lg:max-w-960 md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto px-15 xs:px-25">
+                  <div class="text-center mb-45">
+                     <p class="uppercase tracking-10 text-fs-13 text-accent mb-16">Legal information</p>
+                     <h2 class="text-fs-56 font-black font-Poppins uppercase text-white m-0 down-md:text-fs-42 xs:text-fs-29">Privacy <span class="text-accent">center</span></h2>
+                     <p class="font-Open-sans mt-20 text-fs-16 leading-lh-30 text-black-7 max-w-700 mx-auto">One permanent place for the privacy information of every released game and service.</p>
+                  </div>
+                  <div class="flex flex-wrap -mx-15">
+                     <div class="lg:basis-7/12 down-lg:basis-full px-15">
+                        <h3 class="text-fs-26 xs:text-fs-21 text-white font-semibold mb-16">Policies will be published per product</h3>
+                        <p class="text-fs-16 leading-lh-1.8 mb-18">A privacy policy must match the actual game, its store listing and the services it uses. Rather than publishing a generic text that could be inaccurate, each policy will be added here after its data flows and third-party SDKs are reviewed.</p>
+                        <p class="text-fs-16 leading-lh-1.8 m-0">Every final policy will have a stable, shareable link suitable for Google Play, the App Store and project websites.</p>
+                     </div>
+                     <div class="lg:basis-5/12 down-lg:basis-full px-15 down-lg:mt-35">
+                        <div class="bg-black-2 border border-black-4 rounded-10 p-25">
+                           <p class="uppercase text-accent text-fs-12 font-semibold mb-10">Before publication</p>
+                           <ul class="text-fs-15 leading-lh-26 m-0 pl-20">
+                              <li>Game name and store links</li>
+                              <li>Analytics, ads and other SDKs</li>
+                              <li>Data collection and retention details</li>
+                              <li>Developer contact and effective date</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="border-t border-black-4 mt-45 pt-30">
+                     <h3 class="uppercase text-fs-21 text-white font-semibold mb-10">Policy index</h3>
+                     <p class="text-fs-15 leading-lh-26 text-black-7 m-0">No product-specific policy is published yet. This index will list each game as soon as its final, verified policy is ready.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Privacy Ends -->
+         <!-- Blog Starts -->
+         <div class="page" id="blog">
+            <div class="w-full">
+              <!-- Section Title Starts -->
+               <div class="mx-auto w-full relative py-80 text-center xs:px-25 xs:pt-16 xs:pb-14 xs:bg-black-3 xs:border-b xs:border-black-4 xs:fixed xs:left-0 xs:right-0 xs:top-0 xs:z-20">
+                  <h2 class="text-fs-56 font-black font-Poppins uppercase text-white m-0 xs:text-fs-26 xs:text-left xs:leading-lh-1.2">
+                     my <span class="text-accent">blog</span>
+                  </h2>
+                  <span class="text-fs-110 absolute left-0 right-0 top-1/2 tracking-10 leading-lh-0.7 font-extrabold text-muted -translate-y-1/2 uppercase xs:hidden">posts</span>
+               </div>
+               <!-- Section Title Ends -->
+               <div class="xl:max-w-1140 lg:max-w-960 md:max-w-720 sm:max-w-540 xs:max-w-full mx-auto">
+                 <!-- Blog Posts Starts -->
+                  <div class="flex flex-wrap down-sm:flex-col">
+                    <!-- Blog Post Starts -->
+                     <div class="w-1/3 down-xl:w-1/2 down-sm:w-full px-16 xs:px-0 mb-30">
+                        <div class="h-full bg-black-3 rounded-5">
+                           <div class="rounded-t-5 cursor-pointer post-thumb">
+                              <a href="blog-post-dark.html" class="rounded-t-5 relative overflow-hidden block group outline-0 transition-all duration-300">
+                              <img class="rounded-t-5 transition-all duration-300 group-hover:scale-125" src="https://via.placeholder.com/895x552" alt="">
+                              </a>
+                           </div>
+                           <div class="bg-black-3 pt-20 px-25 pb-25 rounded-b-5">
+                              <a href="blog-post-dark.html" class="leading-lh-26 text-fs-20 font-semibold text-accent-hover transition duration-300">
+                              How to Own Your Audience by Creating an Email List
+                              </a> 
+                              <p class="mt-15 mb-5 font-Open-sans">
+                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Blog Post Ends -->
+                     <!-- Blog Post Starts -->
+                     <div class="w-1/3 down-xl:w-1/2 down-sm:w-full px-16 xs:px-0 mb-30">
+                        <div class="h-full bg-black-3 rounded-5">
+                           <div class="rounded-t-5 cursor-pointer post-thumb">
+                              <a href="blog-post-dark.html" class="rounded-t-5 relative overflow-hidden block group outline-0 transition-all duration-300">
+                              <img class="rounded-t-5 transition-all duration-300 group-hover:scale-125" src="https://via.placeholder.com/895x552" alt="">
+                              </a>
+                           </div>
+                           <div class="bg-black-3 pt-20 px-25 pb-25 rounded-b-5">
+                              <a href="blog-post-dark.html" class="leading-lh-26 text-fs-20 font-semibold text-accent-hover transition duration-300">
+                              Top 10 Toolkits for Deep Learning in 2020
+                              </a> 
+                              <p class="mt-15 mb-5 font-Open-sans">
+                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Blog Post Ends -->
+                     <!-- Blog Post Starts -->
+                     <div class="w-1/3 down-xl:w-1/2 down-sm:w-full px-16 xs:px-0 mb-30">
+                        <div class="h-full bg-black-3 rounded-5">
+                           <div class="rounded-t-5 cursor-pointer post-thumb">
+                              <a href="blog-post-dark.html" class="rounded-t-5 relative overflow-hidden block group outline-0 transition-all duration-300">
+                              <img class="rounded-t-5 transition-all duration-300 group-hover:scale-125" src="https://via.placeholder.com/895x552" alt="">
+                              </a>
+                           </div>
+                           <div class="bg-black-3 pt-20 px-25 pb-25 rounded-b-5">
+                              <a href="blog-post-dark.html" class="leading-lh-26 text-fs-20 font-semibold text-accent-hover transition duration-300">
+                              Everything You Need to Know About Web Accessibility
+                              </a> 
+                              <p class="mt-15 mb-5 font-Open-sans">
+                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Blog Post Ends -->
+                     <!-- Blog Post Starts -->
+                     <div class="w-1/3 down-xl:w-1/2 down-sm:w-full px-16 xs:px-0 mb-30">
+                        <div class="h-full bg-black-3 rounded-5">
+                           <div class="rounded-t-5 cursor-pointer post-thumb">
+                              <a href="blog-post-dark.html" class="rounded-t-5 relative overflow-hidden block group outline-0 transition-all duration-300">
+                              <img class="rounded-t-5 transition-all duration-300 group-hover:scale-125" src="https://via.placeholder.com/895x552" alt="">
+                              </a>
+                           </div>
+                           <div class="bg-black-3 pt-20 px-25 pb-25 rounded-b-5">
+                              <a href="blog-post-dark.html" class="leading-lh-26 text-fs-20 font-semibold text-accent-hover transition duration-300">
+                              How to Inject Humor & Comedy Into Your Brand
+                              </a> 
+                              <p class="mt-15 mb-5 font-Open-sans">
+                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Blog Post Ends -->
+                     <!-- Blog Post Starts -->
+                     <div class="w-1/3 down-xl:w-1/2 down-sm:w-full px-16 xs:px-0 mb-30">
+                        <div class="h-full bg-black-3 rounded-5">
+                           <div class="rounded-t-5 cursor-pointer post-thumb">
+                              <a href="blog-post-dark.html" class="rounded-t-5 relative overflow-hidden block group outline-0 transition-all duration-300">
+                              <img class="rounded-t-5 transition-all duration-300 group-hover:scale-125" src="https://via.placeholder.com/895x552" alt="">
+                              </a>
+                           </div>
+                           <div class="bg-black-3 pt-20 px-25 pb-25 rounded-b-5">
+                              <a href="blog-post-dark.html" class="leading-lh-26 text-fs-20 font-semibold text-accent-hover transition duration-300">
+                              Women in Web Design: How To Achieve Success
+                              </a> 
+                              <p class="mt-15 mb-5 font-Open-sans">
+                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Blog Post Ends -->
+                     <!-- Blog Post Starts -->
+                     <div class="w-1/3 down-xl:w-1/2 down-sm:w-full px-16 xs:px-0 mb-30">
+                        <div class="h-full bg-black-3 rounded-5">
+                           <div class="rounded-t-5 cursor-pointer post-thumb">
+                              <a href="blog-post-dark.html" class="rounded-t-5 relative overflow-hidden block group outline-0 transition-all duration-300">
+                              <img class="rounded-t-5 transition-all duration-300 group-hover:scale-125" src="https://via.placeholder.com/895x552" alt="">
+                              </a>
+                           </div>
+                           <div class="bg-black-3 pt-20 px-25 pb-25 rounded-b-5">
+                              <a href="blog-post-dark.html" class="leading-lh-26 text-fs-20 font-semibold text-accent-hover transition duration-300">
+                              Evergreen versus topical content: An overview
+                              </a> 
+                              <p class="mt-15 mb-5 font-Open-sans">
+                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Blog Post Ends -->
+                  </div>
+                  <!-- Blog Posts Ends -->
+                  <!-- Blog Pagination Starts -->
+                  <nav class="mt-24">
+                     <ul class="flex justify-center from-sm:mb-100 down-sm:mb-60">
+                        <li>
+                           <a class="w-43 h-43 transition-all duration-300 text-center block leading-lh-45 bg-black-3 bg-accent-hover rounded-full mx-5" href="#">
+                           1
+                           </a>
+                        </li>
+                        <li>
+                           <a class="w-43 h-43 transition-all duration-300 text-center block leading-lh-45 bg-accent bg-accent-hover rounded-full mx-5" href="#">
+                           2
+                           </a>
+                        </li>
+                        <li>
+                           <a class="w-43 h-43 transition-all duration-300 text-center block leading-lh-45 bg-black-3 bg-accent-hover rounded-full mx-5" href="#">
+                           3
+                           </a>
+                        </li>
+                        <li>
+                           <a class="w-43 h-43 transition-all duration-300 text-center block leading-lh-45 bg-black-3 bg-accent-hover rounded-full mx-5" href="#">
+                           4
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+                  <!-- Blog Pagination Ends -->
+               </div>
+            </div>
+         </div>
+         <!-- Blog Ends -->
+      </div>
+      <!-- Main Content Ends -->
+      <!-- Template JS Files -->
+      <script src="assets/js/jquery-3.7.1.min.js"></script>
+      <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+      <script src="assets/js/masonry.pkgd.min.js"></script>
+      <script src="assets/js/classie.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/cbpGridGallery.js"></script>
+      <script src="assets/js/jquery.hoverdir.js"></script>
+      <script src="assets/js/menu.js"></script>
+      <script src="assets/js/custom.js"></script>
+   </body>
+</html>
