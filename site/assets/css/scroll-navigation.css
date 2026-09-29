@@ -1,0 +1,27 @@
+/* Scroll navigation replaces the template's full-screen page slider. */
+html { scroll-behavior: smooth; }
+
+body { overflow-x: hidden; overflow-y: auto !important; }
+
+.js .pages, .pages { width: 100%; height: auto !important; overflow: visible !important; }
+
+.js .page, .page, .js .page--current {
+  position: relative;
+  top: auto;
+  left: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  visibility: visible;
+  overflow: visible;
+  opacity: 1;
+}
+
+.page { scroll-margin-top: 24px; }
+#home { min-height: 100vh; }
+#home > .bg-accent { position: absolute; }
+
+@media (max-width: 576px) {
+  .page .xs\\:fixed { position: relative; top: auto; right: auto; left: auto; }
+}
