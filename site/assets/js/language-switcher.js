@@ -1,13 +1,11 @@
 (function () {
   var translations = {
     en: {
-      'hero-kicker': 'Independent game studio',
-      'hero-description': 'Original games. Memorable experiences.',
+      'hero-description': 'We create games and interactive experiences built to be played, remembered and shared.',
       'hero-action': 'explore our games'
     },
     uk: {
-      'hero-kicker': 'Незалежна ігрова студія',
-      'hero-description': 'Оригінальні ігри. Яскраві враження.',
+      'hero-description': 'Ми створюємо ігри та інтерактивний досвід, щоб у них грали, їх пам’ятали й ними ділилися.',
       'hero-action': 'переглянути наші ігри'
     }
   };
