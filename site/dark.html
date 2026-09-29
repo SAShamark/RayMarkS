@@ -34,6 +34,10 @@
       <!-- Preloader Ends -->
       <!-- Header Starts -->
       <header class="header from-lg:fixed from-lg:right-30 from-lg:bottom-0 from-lg:z-30 from-lg:flex from-lg:items-center from-lg:h-[calc(100vh-200px)] from-lg:top-100 from-lg:opacity-100 from-lg:transition from-lg:duration-300 from-lg:[&.hide-header]:z-0 from-lg:[&.hide-header]:opacity-0" id="navbar-collapse-toggle">
+         <div class="language-switcher" aria-label="Language selector">
+            <button type="button" data-language="en" aria-pressed="true">EN</button>
+            <button type="button" data-language="uk" aria-pressed="false">UA</button>
+         </div>
          <!-- Fixed Desktop Navigation Starts -->
          <ul id="desktop-nav" class="icon-menu down-lg:hidden from-md:block uppercase">
             <li class="desktop-nav-element cursor-pointer w-50 h-50 relative flex items-center transition duration-300 my-20 mx-0 rounded-full bg-black-2 active">
@@ -127,11 +131,11 @@
                      <img src="assets/img/hero/pikamoon.png" class="hidden down-lg:block xs:!hidden rounded-full w-270 h-270 mx-auto mb-25 border-4 border-solid border-black-3 object-cover" alt="Pikamoon gameplay">
                      <!-- Mobile Image Ends -->
                      <!-- Informations Starts -->
-                     <p class="font-Open-sans uppercase text-fs-13 tracking-10 text-black-7 mb-12">Independent game development studio</p>
+                     <p class="font-Open-sans uppercase text-fs-13 tracking-10 text-black-7 mb-12" data-i18n="hero-kicker">Independent game development studio</p>
                      <h1 class="text-fs-51 text-accent font-Poppins relative uppercase font-bold leading-lh-62 pl-70 before:absolute before:left-0 before:top-29 before:h-4 before:w-40 before:rounded-10 custom-md-2:text-fs-42 down-xl:before:hidden down-xl:pl-0 custom-md-2:leading-lh-52 down-md:text-fs-38 down-md:leading-lh-48 down-md:mt-29 down-md:mb-13 xs:text-fs-29 xs:leading-lh-39 xs:mt-18">Markovskiy<span class="block text-white">Games</span></h1>
-                     <p class="font-Open-sans mt-15 mb-28 leading-lh-35 down-lg:mt-2.5 down-lg:mb-23 down-lg:text-fs-15 down-lg:leading-lh-30">Creating polished, memorable game experiences — from gameplay systems to release-ready products.</p>
+                     <p class="font-Open-sans mt-15 mb-28 leading-lh-35 down-lg:mt-2.5 down-lg:mb-23 down-lg:text-fs-15 down-lg:leading-lh-30" data-i18n="hero-description">Creating polished, memorable game experiences — from gameplay systems to release-ready products.</p>
                      <div id="link-games" class="button cursor-pointer overflow-hidden inline-block leading-lh-1.4 rounded-30 text-ellipsis text-center align-middle select-none transition-all duration-250 ease-in-out uppercase no-underline relative z-10 py-16 pr-70 pl-35 text-fs-15 font-semibold text-white bg-transparent outline-0 before:absolute before:-z-10 before:left-0 before:right-0 before:top-0 before:bottom-0 before:translate-x-full hover:before:translate-x-0 before:transition before:duration-300 before:ease-out">
-                        <span class="relative z-20 text-white">explore games</span>
+                        <span class="relative z-20 text-white" data-i18n="hero-action">explore games</span>
                         <span class="absolute -right-px bottom-0 w-55 h-55 flex items-center justify-center rounded-full text-white text-fs-19 fa fa-arrow-right bg-accent"></span>
                      </div>
                      <!-- Informations Ends -->
@@ -1277,6 +1281,7 @@
       <script src="assets/js/cbpGridGallery.js"></script>
       <script src="assets/js/jquery.hoverdir.js"></script>
       <script src="assets/js/menu.js"></script>
+      <script src="assets/js/language-switcher.js"></script>
       <script src="assets/js/contact-form.js"></script>
       <script src="assets/js/custom.js"></script>
    </body>
