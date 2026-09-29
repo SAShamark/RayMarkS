@@ -22,6 +22,9 @@ body { overflow-x: hidden; overflow-y: auto !important; }
 #home { min-height: 100vh; }
 #home > .bg-accent { position: absolute; }
 
+/* The template's unused blog demo is not part of the studio website. */
+#blog { display: none !important; }
+
 @media (max-width: 576px) {
   .page .xs\\:fixed { position: relative; top: auto; right: auto; left: auto; }
 }
