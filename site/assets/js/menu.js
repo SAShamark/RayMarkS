@@ -6,6 +6,7 @@
    var mobileItems = Array.from(document.querySelectorAll('#mobile-nav .mobile-nav-element'));
    var mobileToggle = document.getElementById('inputmobile');
    var heroButton = document.getElementById('link-games');
+   var heroCards = Array.from(document.querySelectorAll('.hero-game-card'));
 
    function setActive(index) {
       desktopItems.forEach(function (item, itemIndex) { item.classList.toggle('active', itemIndex === index); });
@@ -31,6 +32,18 @@
    bindNavigation(mobileItems);
 
    if (heroButton) heroButton.addEventListener('click', function () { scrollToSection(2, true); });
+   heroCards.forEach(function (card) {
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', 'Explore all games in the portfolio');
+      card.addEventListener('click', function () { scrollToSection(2, true); });
+      card.addEventListener('keydown', function (event) {
+         if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            scrollToSection(2, true);
+         }
+      });
+   });
 
    if ('IntersectionObserver' in window) {
       var observer = new IntersectionObserver(function (entries) {
