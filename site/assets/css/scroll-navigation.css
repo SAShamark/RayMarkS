@@ -97,7 +97,7 @@ body { overflow-x: hidden; overflow-y: auto !important; }
 .studio-service-grid p { margin: 0; color: #aaa; font: 400 13px/1.65 "Open Sans", sans-serif; }
 .studio-team-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
 .team-member { display: grid; grid-template-columns: 220px minmax(0, 1fr); min-height: 220px; overflow: hidden; border: 1px solid #393939; border-radius: 14px; background: #242424; }
-.team-member__portrait { height: 220px; min-height: 0; background: #191919; }
+.team-member__portrait { align-self: stretch; height: auto; min-height: 220px; background: #191919; }
 .team-member__portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 58%; }
 .team-member__content { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 24px 42px; }
 .team-member__role { margin: 0 0 9px; color: #ffb400; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
@@ -212,10 +212,10 @@ body { overflow-x: hidden; overflow-y: auto !important; }
 
 /* One shared detail view for every visible portfolio card. */
 body.project-modal-open { overflow: hidden !important; }
-.project-modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 28px 92px; }
+.project-modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 28px 30px; }
 .project-modal[hidden] { display: none; }
 .project-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.84); backdrop-filter: blur(7px); }
-.project-modal__dialog { position: relative; z-index: 1; width: min(1180px, 100%); max-height: min(820px, calc(100vh - 48px)); overflow: auto; overscroll-behavior: contain; border: 1px solid #363636; border-radius: 18px; background: #121212; box-shadow: 0 34px 100px rgba(0,0,0,.72); scrollbar-width: none; }
+.project-modal__dialog { position: relative; z-index: 1; width: min(1080px, calc(100vw - 360px)); max-height: min(820px, calc(100vh - 48px)); overflow: auto; overscroll-behavior: contain; border: 1px solid #363636; border-radius: 18px; background: #121212; box-shadow: 0 34px 100px rgba(0,0,0,.72); scrollbar-width: none; }
 .project-modal__dialog::-webkit-scrollbar { display: none; }
 /* This is intentionally separate from the browser scrollbar: it stays beneath the close button. */
 .project-modal__scroll-rail { position: fixed; z-index: 3; width: 10px; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,.11); cursor: pointer; }
@@ -242,11 +242,12 @@ body.project-modal-open { overflow: hidden !important; }
 .project-modal__note { margin-top: 28px !important; padding-top: 22px; border-top: 1px solid #3a3a3a; color: #aaa; font-size: 13px !important; }
 .project-modal__close { position: absolute; z-index: 2; top: 14px; right: 14px; display: grid; width: 42px; height: 42px; place-items: center; border: 0; border-radius: 50%; background: #ffb400; color: #fff; font-size: 19px; cursor: pointer; }
 .project-modal__close:hover { background: #fff; color: #1d1d1d; }
-.project-modal__switch { position: fixed; z-index: 3; top: 50%; display: grid; width: 120px; height: 250px; place-items: center; border: 0; border-radius: 0; background: transparent; color: #ffb400; font-size: 36px; cursor: pointer; transform: translateY(-50%); transition: color 180ms ease; }
+.project-modal__switch { position: fixed; z-index: 3; top: 50%; display: grid; width: 48px; height: 120px; place-items: center; border: 0; border-radius: 0; background: transparent; color: #ffb400; font-size: 36px; cursor: pointer; transform: translateY(-50%); transition: color 180ms ease; }
 .project-modal__switch:hover { color: #fff; }
-/* Both arrows use the same offset from the centered modal, independent of the outer project rail. */
-.project-modal__switch--previous { left: max(0px, calc(50% - 710px)); }
-.project-modal__switch--next { right: max(0px, calc(50% - 710px)); }
+/* The reserved outer gutter keeps both arrows outside the dialog.
+   The right arrow sits before, rather than on top of, the project rail. */
+.project-modal__switch--previous { left: max(20px, calc(50% - 612px)); }
+.project-modal__switch--next { right: max(132px, calc(50% - 612px)); }
 /* The project picker occupies the same outer right rail as the site navigation,
    rather than competing with the detail card for room. */
 .project-modal__navigator { position: fixed; z-index: 3; top: 50%; right: 30px; width: 82px; height: 430px; overflow: hidden; background: transparent; transform: translateY(-50%); -webkit-mask-image: linear-gradient(to bottom, transparent, #000 17%, #000 83%, transparent); mask-image: linear-gradient(to bottom, transparent, #000 17%, #000 83%, transparent); }
@@ -329,6 +330,17 @@ body.project-modal-open { overflow: hidden !important; }
   .site-footer__column:last-child { grid-column: 2; }
 }
 
+/* Tablets use the same compact project picker as phones; forcing a side rail here
+   would steal space from the dialog and break the symmetric arrow layout. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .project-modal { padding: 24px; }
+  .project-modal__dialog { width: min(900px, calc(100vw - 48px)); transform: none; }
+  .project-modal__switch { display: none; }
+  .project-modal__navigator { top: auto; right: auto; bottom: 18px; left: 50%; width: calc(100% - 48px); height: 64px; max-height: 64px; padding: 0; overflow-x: auto; overflow-y: hidden; transform: translateX(-50%); }
+  .project-modal__navigator-list { position: static; flex-direction: row; gap: 11px; min-width: max-content; padding: 7px 10px; transform: none !important; }
+  .project-modal__navigator-item { width: 40px; height: 40px; transform: scale(.86); }
+}
+
 /* Phones and narrow tablets use a true one-column layout, not a scaled desktop page. */
 @media (max-width: 767px) {
   /* Mobile controls share one quiet top bar, keeping them away from the page content. */
@@ -369,7 +381,7 @@ body.project-modal-open { overflow: hidden !important; }
   .contact-form-row { grid-template-columns: 1fr; gap: 14px; }
   .contact-form textarea { margin: 14px 0 24px; }
   .project-modal { padding: 15px; }
-  .project-modal__dialog { display: block; max-height: calc(100vh - 100px); }
+  .project-modal__dialog { display: block; width: 100%; max-height: calc(100vh - 100px); transform: none; }
   .project-modal__content { padding: 38px 26px 44px; }
   .project-modal__intro { grid-template-columns: 112px minmax(0, 1fr); gap: 20px; min-height: 112px; }
   .project-modal__content h2 { font-size: 32px; }

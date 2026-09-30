@@ -73,7 +73,10 @@
     'Tunnel Racing': 'https://play.google.com/store/apps/details?id=com.RayMarkSgames.Tunnelracing',
     'Slimes Kingdom 1.0': 'https://play.google.com/store/apps/details?id=com.RayMarkSgames.Slimeskingdom',
     'Slimes Kingdom 2.0': 'https://play.google.com/store/apps/details?id=com.RayMarkSgames.Slimeskingdom',
-    'Arrow Gallery: Art Puzzle': 'https://play.google.com/store/apps/details?id=com.RayMarkSgames.ArrowGalleryArtPuzzle'
+    'Arrow Gallery: Art Puzzle': 'https://play.google.com/store/apps/details?id=com.RayMarkSgames.ArrowGalleryArtPuzzle',
+    'Drill&Chill Idle Miner Tycoon': 'https://play.google.com/store/apps/details?id=org.smapps.digger',
+    'Water Sort Puzzle: Color Tubes': 'https://play.google.com/store/apps/details?id=com.OptorGroup.ColorTheDrawingGame&utm_source=emea_Med',
+    'Castle Clash: Tower Defense': 'https://play.google.com/store/apps/details?id=com.OptorGroup.WarStrategyOfBattleClans&utm_source=emea_Med'
   };
 
   var projectOverviews = {
