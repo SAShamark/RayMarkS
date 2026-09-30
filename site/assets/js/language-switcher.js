@@ -24,9 +24,9 @@
   entries.forEach(function (entry) { original.push(Array.from(document.querySelectorAll(entry[1])).map(function (element) { return get(element, entry[0]); })); });
   function setLanguage(language) {
     document.documentElement.lang = language === 'uk' ? 'uk' : 'en'; window.raymarksLanguage = language;
-    document.title = language === 'uk' ? 'Ray MarkS Studio — незалежна студія розробки ігор' : 'Markovskiy Games — Independent Game Development Studio';
+    document.title = language === 'uk' ? 'Ray MarkS Studio — незалежна студія розробки ігор' : 'Ray MarkS Studio — Independent Game Development Studio';
     var description = document.querySelector('meta[name="description"]');
-    if (description) description.content = language === 'uk' ? 'Ray MarkS Studio — незалежна ігрова студія з портфоліо ігор, геймплейних систем і розробки на Unity та C#.' : 'Markovskiy Games is an independent game development studio showcasing Unity and C# game projects, gameplay systems and development work.';
+    if (description) description.content = language === 'uk' ? 'Ray MarkS Studio — незалежна ігрова студія з портфоліо ігор, геймплейних систем і розробки на Unity та C#.' : 'Ray MarkS Studio is an independent game development studio showcasing Unity and C# game projects, gameplay systems and development work.';
     entries.forEach(function (entry, index) { var values = language === 'uk' ? uk[entry[2]] : original[index]; Array.from(document.querySelectorAll(entry[1])).forEach(function (element, itemIndex) { put(element, entry[0], Array.isArray(values) ? values[itemIndex] : values); }); });
     document.querySelectorAll('[data-language]').forEach(function (button) { var active = button.dataset.language === language; button.classList.toggle('is-active', active); button.setAttribute('aria-pressed', String(active)); });
     document.querySelector('.site-footer__bottom > span').textContent = '© 2026 Ray MarkS Studio. ' + (language === 'uk' ? uk.rights : 'All rights reserved.');
