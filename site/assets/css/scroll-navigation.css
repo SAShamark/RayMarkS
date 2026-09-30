@@ -331,19 +331,22 @@ body.project-modal-open { overflow: hidden !important; }
 
 /* Phones and narrow tablets use a true one-column layout, not a scaled desktop page. */
 @media (max-width: 767px) {
+  /* Mobile controls share one quiet top bar, keeping them away from the page content. */
+  #navbar-collapse-toggle { position: fixed; inset: 0 0 auto; z-index: 70; height: 76px; border-bottom: 1px solid rgba(255,255,255,.08); background: rgba(18,18,18,.96); box-shadow: 0 8px 22px rgba(0,0,0,.18); pointer-events: none; }
+  #navbar-collapse-toggle .language-switcher, #navbar-collapse-toggle nav { pointer-events: auto; }
   .section-title-primary { display: block; font-size: 32px !important; white-space: normal; }
   .section-title-primary::before { display: none; }
   .section-title-primary::after { display: block; width: 48px; height: 3px; margin-top: 13px; background: #ffb400; }
   .section-title-primary--center::after { margin-right: auto; margin-left: auto; }
   .page .xs\:fixed { position: relative; top: auto; right: auto; left: auto; z-index: auto; }
-  .language-switcher { top: 13px; right: 86px; z-index: 60; }
-  .language-switcher button { min-width: 38px; padding: 7px; }
-  #menuToggle { top: 13px; right: 16px; z-index: 61; }
-  #home { min-height: 0; padding: 92px 25px 48px; }
+  .language-switcher { position: absolute; top: 14px; right: 80px; z-index: 71; padding: 4px; }
+  .language-switcher button { min-width: 43px; min-height: 40px; padding: 0 11px; font-size: 13px; }
+  .home #menuToggle { position: absolute; top: 12px; right: 16px; z-index: 72; width: 52px; height: 52px; padding: 18px 0 0 14px; }
+  .js .page#home { min-height: 0; padding: 112px 25px 56px; }
   #home > div.relative { justify-content: flex-start; }
   #home .mx-auto { max-width: none; margin-right: 0; margin-left: 0; }
   #home .hero-mobile-brand { justify-content: flex-start; margin: 0 0 16px; }
-  #home h1 { margin-top: 0; font-size: 35px; line-height: 1.13; }
+  #home h1 { margin-top: 0; font-size: clamp(40px, 12vw, 48px); line-height: 1.08; }
   #home p[data-i18n="hero-description"] { margin-top: 18px; margin-bottom: 26px; font-size: 16px; line-height: 1.75; }
   #link-games { display: inline-flex; align-items: center; justify-content: center; width: min(100%, 360px); min-height: 60px; padding: 0 64px 0 20px; }
   #link-games .fa-arrow-right { display: grid; height: 60px; place-items: center; }
@@ -353,7 +356,11 @@ body.project-modal-open { overflow: hidden !important; }
   .studio-intro__copy > p:not(.studio-eyebrow) { font-size: 15px; }
   .studio-intro__brand { padding: 25px; }
   .studio-services, .studio-team { margin-top: 58px; }
-  .studio-service-grid, .portfolio-showcase-grid, .privacy-policy-grid { grid-template-columns: 1fr; }
+  /* The desktop title strips become light, compact section dividers on phones. */
+  .page > .w-full > div:first-child.xs\:bg-black-3 { padding: 50px 25px 27px; border-bottom: 0; background: transparent; }
+  .studio-service-grid, .privacy-policy-grid { grid-template-columns: 1fr; }
+  .portfolio-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .portfolio-showcase figcaption { padding: 24px 12px 11px; font-size: 13px; line-height: 1.25; }
   .studio-service-grid article { min-height: 0; }
   .team-member { grid-template-columns: 1fr; }
   .team-member__portrait { height: 240px; min-height: 0; max-height: none; }
@@ -382,7 +389,7 @@ body.project-modal-open { overflow: hidden !important; }
 }
 
 @media (max-width: 576px) {
-  .language-switcher { top: 8px; right: 78px; }
+  .language-switcher { top: 14px; right: 80px; }
   .studio-layout { padding-bottom: 58px; }
   .studio-intro__copy { padding-top: 0; }
   .studio-intro__copy > p:not(.studio-eyebrow) { font-size: 15px; }
@@ -394,7 +401,7 @@ body.project-modal-open { overflow: hidden !important; }
   .team-member__portrait { height: 240px; min-height: 0; max-height: none; }
   .team-member__content { padding: 30px 25px; }
   .team-member__content h4 { font-size: 26px; }
-  .portfolio-showcase-grid { grid-template-columns: 1fr; gap: 20px; }
+  .portfolio-showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
   .contact-form-row { grid-template-columns: 1fr; gap: 14px; }
   .contact-form textarea { margin: 14px 0 24px; }
   .project-modal { padding: 15px; }
